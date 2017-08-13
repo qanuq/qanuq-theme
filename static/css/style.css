@@ -20,6 +20,8 @@ body {
 	margin-right:auto;
 }
 
+/* TODO voir pour avoir un autre l-box pour le contenu, 2/3 em. */
+/* TODO voir pour avoir un autre l-box, juste horizontal */
 .l-box {
 	padding: 1em;
 }
@@ -29,7 +31,7 @@ body {
 	border-right:1px solid rgba(0,0,0,.1);
 }
 
-footer#footer {
+#footer {
 	background-color:#333;
 	padding:0;
 	color:#fff;
@@ -38,29 +40,29 @@ footer#footer {
 	font-weight:300;
 }
 
-footer#footer > div {
+#footer > div {
 	margin-left:auto;
 	margin-right:auto;
 }
 
-footer#footer div.title {
+#footer div.title {
 	text-transform:uppercase;
 	font-weight:600;
 }
 
-footer#footer ul {
+#footer ul {
 	padding-left:0;
 	list-style-type:none;
 	margin-top:0;
 	margin-bottom:0;
 }
 
-footer#footer a {
+#footer a {
 	color:#fff;
 	text-decoration:none;
 }
 
-footer#footer a:hover, footer#footer a:focus {
+#footer a:hover, #footer a:focus {
 	text-decoration:underline;
 }
 
@@ -69,21 +71,30 @@ footer#footer a:hover, footer#footer a:focus {
 }
 
 #post-list .time {
+	font-size:0.8em;
+	font-weight:300;
 	overflow:hidden;
-	text-align:right;
 	text-overflow:ellipsis;
 	white-space:nowrap;
+}
+
+#post-list .time time {
+	margin-right:1.5em;
+}
+
+#post-list .title {
+	font-size:0.9em;
 }
 
 #paginator {
 	margin:2em auto 0 auto;
 	text-align:center;
+	font-size:0.9em;
+	font-weight:300;
 }
 
 #post-list, #paginator {
-	font-size:0.9em;
 	line-height:2em;
-	font-weight:300;
 }
 
 #post-list .title a, #paginator a {
@@ -93,5 +104,19 @@ footer#footer a:hover, footer#footer a:focus {
 
 #post-list .title a:hover, #post-list .title a:focus, #paginator a:hover, #paginator a:focus {
 	text-decoration:underline;
+}
+
+/* TODO voir dans quelle classe h2 se situe */
+h2 {
+	font-size:1.25em;
+	font-weight:600;
+	color:#4b505a;
+}
+h2:after {
+	display:block;
+	content:" ";
+	margin-top:.125em;
+	width:5em;
+	border-bottom:.25em solid #eb2344;
 }
 

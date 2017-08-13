@@ -63,3 +63,35 @@ footer#footer a {
 footer#footer a:hover, footer#footer a:focus {
 	text-decoration:underline;
 }
+
+#post-list {
+	margin:0;
+}
+
+#post-list .time {
+	overflow:hidden;
+	text-align:right;
+	text-overflow:ellipsis;
+	white-space:nowrap;
+}
+
+#paginator {
+	margin:2em auto 0 auto;
+	text-align:center;
+}
+
+#post-list, #paginator {
+	font-size:0.9em;
+	line-height:2em;
+	font-weight:300;
+}
+
+#post-list .title a, #paginator a {
+	color:#eb2344;
+	text-decoration:none;
+}
+
+#post-list .title a:hover, #post-list .title a:focus, #paginator a:hover, #paginator a:focus {
+	text-decoration:underline;
+}
+

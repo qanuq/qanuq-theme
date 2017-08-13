@@ -1,11 +1,12 @@
 {% if DEFAULT_PAGINATION %}
-<p class="paginator">
+<div id="paginator">
     {% if articles_page.has_previous() %}
-        <a href="{{ SITEURL }}/{{ articles_previous_page.url }}">&laquo;</a>
+	<a href="{{ SITEURL }}/{{ articles_previous_page.url }}"><i class="fa fa-arrow-left" aria-hidden="true"></i> {{ QANUQ_PAGINATION_PREVIOUS }}</a>
     {% endif %}
+	{# TODO constante page #}
     Page {{ articles_page.number }} / {{ articles_paginator.num_pages }}
     {% if articles_page.has_next() %}
-        <a href="{{ SITEURL }}/{{ articles_next_page.url }}">&raquo;</a>
+	<a href="{{ SITEURL }}/{{ articles_next_page.url }}">{{ QANUQ_PAGINATION_NEXT }} <i class="fa fa-arrow-right" aria-hidden="true"></i></a>
     {% endif %}
 </p>
 {% endif %}

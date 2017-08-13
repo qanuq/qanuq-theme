@@ -29,7 +29,7 @@ body {
 	border-right:1px solid rgba(0,0,0,.1);
 }
 
-footer {
+footer#footer {
 	background-color:#333;
 	padding:0;
 	color:#fff;
@@ -38,28 +38,28 @@ footer {
 	font-weight:300;
 }
 
-footer > div {
+footer#footer > div {
 	margin-left:auto;
 	margin-right:auto;
 }
 
-footer div.title {
+footer#footer div.title {
 	text-transform:uppercase;
 	font-weight:600;
 }
 
-footer ul {
+footer#footer ul {
 	padding-left:0;
 	list-style-type:none;
 	margin-top:0;
 	margin-bottom:0;
 }
 
-footer a {
+footer#footer a {
 	color:#fff;
 	text-decoration:none;
 }
 
-footer a:hover, footer a:focus {
+footer#footer a:hover, footer#footer a:focus {
 	text-decoration:underline;
 }

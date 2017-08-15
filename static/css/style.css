@@ -98,7 +98,7 @@ body {
 }
 
 #post-list .title a, #paginator a {
-	color:#eb2344;
+	color:#f33;
 	text-decoration:none;
 }
 
@@ -107,16 +107,60 @@ body {
 }
 
 /* TODO voir dans quelle classe h2 se situe */
-h2 {
-	font-size:1.25em;
-	font-weight:600;
-	color:#4b505a;
+h2[id], h2[id] a, h3[id], h3[id] a, h4[id], h4[id] a, h5[id], h5[id] a, h6[id], h6[id] a {
+	text-decoration:none;
+	display:block;
 }
-h2:after {
+
+h2[id], h2[id] a, h3[id], h3[id] a, h4[id], h4[id] a, h5[id], h5[id] a, h6[id], h6[id] a {
+	font-weight:600;
+	color:#444;
+}
+
+h2[id], h2[id] a {
+	font-size:1.25em;
+}
+h3[id], h3[id] a {
+	font-size:1.2em;
+}
+h4[id], h4[id] a {
+	font-size:1.15em;
+}
+h5[id], h5[id] a {
+	font-size:1.1;
+}
+h6[id], h6[id] a {
+	font-size:1.05em;
+}
+h2[id]:after, h3[id]:after, h4[id]:after, h5[id]:after, h6[id]:after {
 	display:block;
 	content:" ";
 	margin-top:.125em;
-	width:5em;
-	border-bottom:.25em solid #eb2344;
 }
-
+h2[id]:after {
+	border-bottom:.25em solid #f33;
+	width:12em;
+}
+h3[id]:after {
+	border-bottom:.25em solid #f63;
+	width:10em;
+}
+h4[id]:after {
+	border-bottom:.25em solid #f93;
+	width:8em;
+}
+h5[id]:after {
+	border-bottom:.25em solid #fc3;
+	width:6em;
+}
+h6[id]:after {
+	border-bottom:.25em solid #ff3;
+	width:4em;
+}
+h2[id] a:focus:after, h2[id] a:hover:after, h3[id] a:focus:after, h3[id] a:hover:after,
+h4[id] a:focus:after, h4[id] a:hover:after, h5[id] a:focus:after, h5[id] a:hover:after,
+h6[id] a:focus:after, h6[id] a:hover:after {
+	content:"\f0c1";
+	font-family:"FontAwesome";
+	float:right;
+}

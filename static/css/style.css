@@ -110,11 +110,13 @@ body {
 h2[id], h2[id] a, h3[id], h3[id] a, h4[id], h4[id] a, h5[id], h5[id] a, h6[id], h6[id] a {
 	text-decoration:none;
 	display:block;
-}
-
-h2[id], h2[id] a, h3[id], h3[id] a, h4[id], h4[id] a, h5[id], h5[id] a, h6[id], h6[id] a {
 	font-weight:600;
 	color:#444;
+}
+
+h2[id], h3[id], h4[id], h5[id], h6[id] {
+	margin-top:1em;
+	margin-bottom:1em;
 }
 
 h2[id], h2[id] a {
@@ -127,7 +129,7 @@ h4[id], h4[id] a {
 	font-size:1.15em;
 }
 h5[id], h5[id] a {
-	font-size:1.1;
+	font-size:1.1em;
 }
 h6[id], h6[id] a {
 	font-size:1.05em;
@@ -142,19 +144,19 @@ h2[id]:after {
 	width:12em;
 }
 h3[id]:after {
-	border-bottom:.25em solid #f63;
+	border-bottom:.225em solid #f53;
 	width:10em;
 }
 h4[id]:after {
-	border-bottom:.25em solid #f93;
+	border-bottom:.2em solid #f73;
 	width:8em;
 }
 h5[id]:after {
-	border-bottom:.25em solid #fc3;
+	border-bottom:.175em solid #f93;
 	width:6em;
 }
 h6[id]:after {
-	border-bottom:.25em solid #ff3;
+	border-bottom:.15em solid #fb3;
 	width:4em;
 }
 h2[id] a:focus:after, h2[id] a:hover:after, h3[id] a:focus:after, h3[id] a:hover:after,

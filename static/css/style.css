@@ -33,6 +33,7 @@ body {
 
 #footer {
 	background-color:#333;
+	background-image:url('../images/background-pattern.png');
 	padding:0;
 	color:#fff;
 	font-size:0.75em;
@@ -134,35 +135,75 @@ h5[id], h5[id] a {
 h6[id], h6[id] a {
 	font-size:1.05em;
 }
-h2[id]:after, h3[id]:after, h4[id]:after, h5[id]:after, h6[id]:after {
+h2[id]::after, h3[id]::after, h4[id]::after, h5[id]::after, h6[id]::after {
 	display:block;
 	content:" ";
 	margin-top:.125em;
 }
-h2[id]:after {
+h2[id]::after {
 	border-bottom:.25em solid #f33;
 	width:12em;
 }
-h3[id]:after {
+h3[id]::after {
 	border-bottom:.225em solid #f53;
 	width:10em;
 }
-h4[id]:after {
+h4[id]::after {
 	border-bottom:.2em solid #f73;
 	width:8em;
 }
-h5[id]:after {
+h5[id]::after {
 	border-bottom:.175em solid #f93;
 	width:6em;
 }
-h6[id]:after {
+h6[id]::after {
 	border-bottom:.15em solid #fb3;
 	width:4em;
 }
-h2[id] a:focus:after, h2[id] a:hover:after, h3[id] a:focus:after, h3[id] a:hover:after,
-h4[id] a:focus:after, h4[id] a:hover:after, h5[id] a:focus:after, h5[id] a:hover:after,
-h6[id] a:focus:after, h6[id] a:hover:after {
+h2[id] a:focus::after, h2[id] a:hover::after, h3[id] a:focus::after, h3[id] a:hover::after,
+h4[id] a:focus::after, h4[id] a:hover::after, h5[id] a:focus::after, h5[id] a:hover::after,
+h6[id] a:focus::after, h6[id] a:hover::after {
 	content:"\f0c1";
 	font-family:"FontAwesome";
 	float:right;
+}
+
+#footer a[href*="twitter"]::before {
+	content:"\f099";
+	font-family:"FontAwesome";
+	margin-right:0.5em;
+}
+
+#footer a[href*="facebook"]::before {
+	content:"\f230";
+	font-family:"FontAwesome";
+	margin-right:0.5em;
+}
+
+#footer a[href*="linkedin"]::before {
+	content:"\f0e1";
+	font-family:"FontAwesome";
+	margin-right:0.5em;
+}
+
+#footer a[href*="github"]::before {
+	content:"\f09b";
+	font-family:"FontAwesome";
+	margin-right:0.5em;
+}
+
+#footer a[href*="500px"]::before {
+	content:"\f26e";
+	font-family:"FontAwesome";
+	margin-right:0.5em;
+}
+
+::selection {
+	background: #ff842c; /* Safari */
+	color: #FFF;
+}
+
+::-moz-selection {
+	background: #ff842c; /* Firefox */
+	color: #FFF;
 }

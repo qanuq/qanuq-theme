@@ -168,34 +168,35 @@ h6[id] a:focus::after, h6[id] a:hover::after {
 	float:right;
 }
 
-#footer a[href*="twitter"]::before {
-	content:"\f099";
+#footer a[href*="twitter"]::before,
+#footer a[href*="facebook"]::before,
+#footer a[href*="linkedin"]::before,
+#footer a[href*="github"]::before,
+#footer a[href*="500px"]::before {
 	font-family:"FontAwesome";
 	margin-right:0.5em;
+	display:inline-block;
+	color:#eee;
+}
+
+#footer a[href*="twitter"]::before {
+	content:"\f099";
 }
 
 #footer a[href*="facebook"]::before {
 	content:"\f230";
-	font-family:"FontAwesome";
-	margin-right:0.5em;
 }
 
 #footer a[href*="linkedin"]::before {
 	content:"\f0e1";
-	font-family:"FontAwesome";
-	margin-right:0.5em;
 }
 
 #footer a[href*="github"]::before {
 	content:"\f09b";
-	font-family:"FontAwesome";
-	margin-right:0.5em;
 }
 
 #footer a[href*="500px"]::before {
 	content:"\f26e";
-	font-family:"FontAwesome";
-	margin-right:0.5em;
 }
 
 ::selection {

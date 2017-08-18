@@ -121,14 +121,6 @@
                     <div class="pure-u-1-2 pure-u-md-1-2 pure-u-lg-1-4">
                         <div class="l-box">
                             <div class="title">{{ QANUQ_SITEMAP_COLUMN_TITLE }}</div>
-							{#
-							TODO
-							http://fontawesome.io/icon/archive/
-							http://fontawesome.io/icon/tag/
-							http://fontawesome.io/icon/tags/
-							http://fontawesome.io/icon/pencil/
-							http://fontawesome.io/icon/sitemap/
-							#}
                             <ul>
                                 {% for title, link in QANUQ_SITEMAP_MENU %}
                                 <li><a href="{{ SITEURL }}{{ link }}">{{ title }}</a></li>
@@ -139,6 +131,7 @@
                                 {% if FEED_ALL_RSS %}
                                 <li><a href="{{ FEED_DOMAIN }}/{{ FEED_ALL_RSS }}" type="application/rss+xml" rel="alternate">{{ QANUQ_SITEMAP_RSS_LINK }}</a></li>
                                 {% endif %}
+                                {# TODO <li><a href="/sitemap.xml">sitemap</a></li> #}
                             </ul>
                         </div>
                     </div>

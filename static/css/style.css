@@ -139,26 +139,22 @@ h2[id]::after, h3[id]::after, h4[id]::after, h5[id]::after, h6[id]::after {
 	display:block;
 	content:" ";
 	margin-top:.125em;
+	width:100%;
 }
 h2[id]::after {
-	border-bottom:.25em solid #f33;
-	width:12em;
+	border-bottom:.5em solid #f33;
 }
 h3[id]::after {
-	border-bottom:.225em solid #f53;
-	width:10em;
+	border-bottom:.4em solid #f53;
 }
 h4[id]::after {
-	border-bottom:.2em solid #f73;
-	width:8em;
+	border-bottom:.3em solid #f73;
 }
 h5[id]::after {
-	border-bottom:.175em solid #f93;
-	width:6em;
+	border-bottom:.2em solid #f93;
 }
 h6[id]::after {
-	border-bottom:.15em solid #fb3;
-	width:4em;
+	border-bottom:.1em solid #fb3;
 }
 h2[id] a:focus::after, h2[id] a:hover::after, h3[id] a:focus::after, h3[id] a:hover::after,
 h4[id] a:focus::after, h4[id] a:hover::after, h5[id] a:focus::after, h5[id] a:hover::after,
@@ -172,7 +168,8 @@ h6[id] a:focus::after, h6[id] a:hover::after {
 #footer a[href*="facebook"]::before,
 #footer a[href*="linkedin"]::before,
 #footer a[href*="github"]::before,
-#footer a[href*="500px"]::before {
+#footer a[href*="500px"]::before,
+#footer a[href*="paypal"]::before {
 	font-family:"FontAwesome";
 	margin-right:0.5em;
 	display:inline-block;
@@ -197,6 +194,10 @@ h6[id] a:focus::after, h6[id] a:hover::after {
 
 #footer a[href*="500px"]::before {
 	content:"\f26e";
+}
+
+#footer a[href*="paypal"]::before {
+	content:"\f1ed";
 }
 
 ::selection {

@@ -200,11 +200,29 @@ h6[id] a:focus::after, h6[id] a:hover::after {
 }
 
 ::selection {
-	background: #ff842c; /* Safari */
-	color: #FFF;
+	background:#f83; /* Safari */
+	color:#FFF;
 }
 
 ::-moz-selection {
-	background: #ff842c; /* Firefox */
-	color: #FFF;
+	background:#f83; /* Firefox */
+	color:#FFF;
 }
+
+.highlight {
+	margin-top:1em;
+	margin-bottom:1em;
+}
+.highlight pre {
+	padding:2em;
+	background-image:url('../images/background-pattern.png');
+	border:none;
+	font-size:.8em;
+	font-weight:300;
+	font-family:Consolas,monaco,monospace;
+	background-color:#333;
+	color:#fff;
+}
+
+
+

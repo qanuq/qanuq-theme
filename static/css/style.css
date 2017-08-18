@@ -31,6 +31,7 @@ body {
 	border-right:1px solid rgba(0,0,0,.1);
 }
 
+/******************** footer start ********************/
 #footer {
 	background-color:#333;
 	background-image:url('../images/background-pattern.png');
@@ -46,7 +47,7 @@ body {
 	margin-right:auto;
 }
 
-#footer div.title {
+#footer .title {
 	text-transform:uppercase;
 	font-weight:600;
 }
@@ -66,6 +67,70 @@ body {
 #footer a:hover, #footer a:focus {
 	text-decoration:underline;
 }
+
+#footer a[type*="atom+xml"]::before,
+#footer a[type*="rss+xml"]::before,
+#footer a[href*="/archives"]::before,
+#footer a[href*="/authors"]::before,
+#footer a[href*="/sitemap.xml"]::before,
+#footer a[href*="/tags"]::before,
+#footer a[href*="500px"]::before,
+#footer a[href*="facebook"]::before,
+#footer a[href*="github"]::before,
+#footer a[href*="linkedin"]::before,
+#footer a[href*="paypal"]::before,
+#footer a[href*="twitter"]::before {
+	font-family:"FontAwesome";
+	margin-right:0.5em;
+	display:inline-block;
+	color:#eee;
+}
+
+#footer a[href*="/archives"]::before {
+	content:"\f187";
+}
+
+#footer a[href*="/authors"]::before {
+	content:"\f040";
+}
+
+#footer a[href*="/sitemap.xml"]::before {
+	content:"\f0e8";
+}
+
+#footer a[href*="/tags"]::before {
+	content:"\f02c";
+}
+
+#footer a[href*="500px"]::before {
+	content:"\f26e";
+}
+
+#footer a[href*="facebook"]::before {
+	content:"\f230";
+}
+
+#footer a[href*="github"]::before {
+	content:"\f09b";
+}
+
+#footer a[href*="linkedin"]::before {
+	content:"\f0e1";
+}
+
+#footer a[href*="paypal"]::before {
+	content:"\f1ed";
+}
+
+#footer a[href*="twitter"]::before {
+	content:"\f099";
+}
+
+#footer a[type*="atom+xml"]::before,
+#footer a[type*="rss+xml"]::before {
+	content:"\f09e";
+}
+/******************** footer end ********************/
 
 #post-list {
 	margin:0;
@@ -162,42 +227,6 @@ h6[id] a:focus::after, h6[id] a:hover::after {
 	content:"\f0c1";
 	font-family:"FontAwesome";
 	float:right;
-}
-
-#footer a[href*="twitter"]::before,
-#footer a[href*="facebook"]::before,
-#footer a[href*="linkedin"]::before,
-#footer a[href*="github"]::before,
-#footer a[href*="500px"]::before,
-#footer a[href*="paypal"]::before {
-	font-family:"FontAwesome";
-	margin-right:0.5em;
-	display:inline-block;
-	color:#eee;
-}
-
-#footer a[href*="twitter"]::before {
-	content:"\f099";
-}
-
-#footer a[href*="facebook"]::before {
-	content:"\f230";
-}
-
-#footer a[href*="linkedin"]::before {
-	content:"\f0e1";
-}
-
-#footer a[href*="github"]::before {
-	content:"\f09b";
-}
-
-#footer a[href*="500px"]::before {
-	content:"\f26e";
-}
-
-#footer a[href*="paypal"]::before {
-	content:"\f1ed";
 }
 
 ::selection {

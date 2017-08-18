@@ -118,8 +118,14 @@ body {
 	content:"\f0e1";
 }
 
+#footer a[href*="paypal"] {
+	color:#f96;
+	font-weight:600;
+}
+
 #footer a[href*="paypal"]::before {
 	content:"\f1ed";
+	color:#f96;
 }
 
 #footer a[href*="twitter"]::before {

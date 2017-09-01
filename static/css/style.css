@@ -1,3 +1,4 @@
+/* TODO réorganiser plus tard */
 html, button, input, select, textarea, .pure-g [class *= "pure-u"] {
 	/* Set your content font stack here: */
 	font-family:"Open Sans",sans-serif;
@@ -265,32 +266,38 @@ h6[id] a:focus::after, h6[id] a:hover::after {
 
 /******************** article begin ********************/
 
-div.toc {
+.article div.toc {
 	font-weight:300;
 	font-size:0.9em;
 	line-height:1.5em;
 }
 
-div.toc, div.toc a {
+.article div.toc,
+.article div.toc a,
+.article a {
 	color:#f33;
 }
 
-div.toc ul {
+.article div.toc ul {
 	padding-left:2em;
 	list-style-position:inside;
 }
 
-div.toc > ul {
+.article div.toc > ul {
 	padding-left:0;
 	margin-top:1em;
 	margin-bottom:1em;
 }
 
-div.toc a {
+.article div.toc a,
+.article a {
 	text-decoration:none;
 }
-div.toc a:focus,
-div.toc a:hover {
+
+.article div.toc a:focus,
+.article div.toc a:hover,
+.article a:focus,
+.article a:hover {
 	text-decoration:underline;
 }
 

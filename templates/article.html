@@ -1,4 +1,5 @@
 {% extends "base.html" %}
+{% block content_class %}article{% endblock content_class %}
 {% block head %}
   {{ super() }}
   {% if article.description %}

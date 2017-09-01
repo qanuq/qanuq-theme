@@ -106,10 +106,10 @@
         </div>
 
         <div class="pure-g">
-            <div id="content-container" class="pure-u-1 pure-u-md-20-24 pure-u-lg-16-24">
+			<div id="content-container" class="pure-u-1 pure-u-md-20-24 pure-u-lg-16-24 {% block content_class %}{% endblock content_class %}">
                 <div class="l-box">
 					{% block content %}
-					{% endblock %}
+					{% endblock content %}
                 </div>
             </div>
         </div>

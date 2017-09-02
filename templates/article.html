@@ -40,11 +40,13 @@
 
 {% block extra_header %}
 	{% if article.tags %}
+	<div id="tags">
 		<i class="fa fa-tags" aria-hidden="true"></i>
 		{% for tag in article.tags %}
 			<a href="{{ SITEURL }}/{{ tag.url }}">{{ tag }}</a>
 			{{ "," if not loop.last }}
 		{% endfor %}
+	</div>
 	{% endif %}
 {% endblock extra_header %}
 

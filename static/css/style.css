@@ -314,3 +314,33 @@ h6[id] a:focus::after, h6[id] a:hover::after {
 
 /******************** article end ********************/
 
+/******************** header begin ********************/
+
+#banner h1 {
+	text-align:center;
+}
+
+#banner .subtitle {
+	text-align:center;
+}
+
+#menu {
+	text-align:right;
+}
+
+#menu ul {
+	list-style-type:none;
+	margin:0;
+}
+
+#menu ul > li {
+	display:inline-block;
+}
+
+#tags {
+	text-align:right;
+}
+
+/******************** header end ********************/
+
+

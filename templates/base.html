@@ -79,7 +79,9 @@
             <div class="pure-u-1">
                 {# TODO gérer le header #}
                 <header id="banner" class="body">
-                    <h1><a href="{{ SITEURL }}/">{{ SITENAME }} <strong>{{ SITESUBTITLE }}</strong></a></h1>
+					<h1>{% block title_header %}<a href="{{ SITEURL }}/">{{ SITENAME }}</a>{% endblock title_header %}</h1>
+					<p id="subtitle">{% block subtitle_header %}{{ SITESUBTITLE }}{% endblock subtitle_header %}</p>
+					{% block extra_header %}{% endblock extra_header %}
                 </header>
 
                 {# TODO gérer le menu #}

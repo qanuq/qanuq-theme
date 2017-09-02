@@ -180,7 +180,11 @@ body {
 }
 
 /* TODO voir dans quelle classe h2 se situe */
-h2[id], h2[id] a, h3[id], h3[id] a, h4[id], h4[id] a, h5[id], h5[id] a, h6[id], h6[id] a {
+h2[id], h2[id] a, h2[id] a:focus, h2[id] a:hover,
+h3[id], h3[id] a, h3[id] a:focus, h3[id] a:hover,
+h4[id], h4[id] a, h4[id] a:focus, h4[id] a:hover,
+h5[id], h5[id] a, h5[id] a:focus, h5[id] a:hover,
+h6[id], h6[id] a, h6[id] a:focus, h6[id] a:hover {
 	text-decoration:none;
 	display:block;
 	font-weight:600;
@@ -207,7 +211,11 @@ h5[id], h5[id] a {
 h6[id], h6[id] a {
 	font-size:1.05em;
 }
-h2[id]::after, h3[id]::after, h4[id]::after, h5[id]::after, h6[id]::after {
+h2[id]::after,
+h3[id]::after,
+h4[id]::after,
+h5[id]::after,
+h6[id]::after {
 	display:block;
 	content:" ";
 	margin-top:.125em;
@@ -228,8 +236,10 @@ h5[id]::after {
 h6[id]::after {
 	border-bottom:.1em solid #fb3;
 }
-h2[id] a:focus::after, h2[id] a:hover::after, h3[id] a:focus::after, h3[id] a:hover::after,
-h4[id] a:focus::after, h4[id] a:hover::after, h5[id] a:focus::after, h5[id] a:hover::after,
+h2[id] a:focus::after, h2[id] a:hover::after,
+h3[id] a:focus::after, h3[id] a:hover::after,
+h4[id] a:focus::after, h4[id] a:hover::after,
+h5[id] a:focus::after, h5[id] a:hover::after,
 h6[id] a:focus::after, h6[id] a:hover::after {
 	content:"\f0c1";
 	font-family:"FontAwesome";
@@ -273,7 +283,6 @@ h6[id] a:focus::after, h6[id] a:hover::after {
 }
 
 .article div.toc,
-.article div.toc a,
 .article a {
 	color:#f33;
 }
@@ -289,13 +298,10 @@ h6[id] a:focus::after, h6[id] a:hover::after {
 	margin-bottom:1em;
 }
 
-.article div.toc a,
 .article a {
 	text-decoration:none;
 }
 
-.article div.toc a:focus,
-.article div.toc a:hover,
 .article a:focus,
 .article a:hover {
 	text-decoration:underline;

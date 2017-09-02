@@ -12,16 +12,19 @@
 
 {% endblock %}
 
-{% block content %}
-<section id="content" class="body">
-  <header>
-    <h1 class="entry-title">
-      <a href="{{ SITEURL }}/{{ article.url }}" rel="bookmark"
-         title="Permalink to {{ article.title|striptags }}">{{ article.title }}</a></h1>
- {% import 'translations.html' as translations with context %}
- {{ translations.translations_for(article) }}
-  </header>
-  <footer class="post-info">
+{% block title_header %}
+	<a href="{{ SITEURL }}/{{ article.url }}" rel="bookmark" title="Permalink to {{ article.title|striptags }}">{{ article.title }}</a>
+{% endblock title_header %}
+
+{% block subtitle_header %}
+    {% if article.authors %}
+    <address class="vcard author">
+      By {% for author in article.authors %}
+          <a class="url fn" href="{{ SITEURL }}/{{ author.url }}">{{ author }}</a>
+		  {{ "," if not loop.last }}
+        {% endfor %}
+    </address>
+    {% endif %}
     <time class="published" datetime="{{ article.date.isoformat() }}">
       {{ article.locale_date }}
     </time>
@@ -30,16 +33,30 @@
       {{ article.locale_modified }}
     </time>
 	{% endif %}
-    {% if article.authors %}
-    <address class="vcard author">
-      By {% for author in article.authors %}
-          <a class="url fn" href="{{ SITEURL }}/{{ author.url }}">{{ author }}</a>
-        {% endfor %}
-    </address>
-    {% endif %}
-  </footer><!-- /.post-info -->
+	{% if article.category %}
+		<a href="{{ SITEURL }}/{{ article.category.url }}">{{ article.category }}</a>
+	{% endif %}
+{% endblock subtitle_header %}
+
+{% block extra_header %}
+	{% if article.tags %}
+		<i class="fa fa-tags" aria-hidden="true"></i>
+		{% for tag in article.tags %}
+			<a href="{{ SITEURL }}/{{ tag.url }}">{{ tag }}</a>
+			{{ "," if not loop.last }}
+		{% endfor %}
+	{% endif %}
+{% endblock extra_header %}
+
+{% block content %}
+<section id="content" class="body">
+  <header>
+	  {# TODO voir comment marche la traduction mais je n'en ai pas besoin ? #}
+ {% import 'translations.html' as translations with context %}
+ {{ translations.translations_for(article) }}
+  </header>
   <div class="entry-content">
     {{ article.content }}
-  </div><!-- /.entry-content -->
+  </div>
 </section>
 {% endblock %}

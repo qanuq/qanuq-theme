@@ -316,12 +316,39 @@ h6[id] a:focus::after, h6[id] a:hover::after {
 
 /******************** header begin ********************/
 
+#header-container {
+	color:#fff;
+}
+
+#header-container a {
+	color:#fff;
+	text-decoration:none;
+}
+
+#header-container a:hover,
+#header-container a:focus {
+	text-decoration:underline;
+}
+
+#banner h1 a:hover,
+#banner h1 a:focus {
+	text-decoration:none;
+}
+
 #banner h1 {
 	text-align:center;
+	font-size:1.75em;
+	font-weight:600;
 }
 
 #banner .subtitle {
 	text-align:center;
+	font-size:0.9em;
+	font-weight:300;
+}
+
+#banner .subtitle a {
+	font-weight:600;
 }
 
 #menu {
@@ -339,6 +366,8 @@ h6[id] a:focus::after, h6[id] a:hover::after {
 
 #tags {
 	text-align:right;
+	font-size:0.8em;
+	font-weight:600;
 }
 
 /******************** header end ********************/

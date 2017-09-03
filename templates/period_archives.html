@@ -1,6 +1,7 @@
 {% extends "base.html" %}
-{# TODO title ? #}
+{% block title %}{{ SITENAME }} - Archives pour {{ period | reverse | join(' ') }}{% endblock %}
 {% block content_class %}period_archives{% endblock content_class %}
+
 {% block content %}
 <h2>Archives pour {{ period | reverse | join(' ') }}</h2>
 

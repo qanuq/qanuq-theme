@@ -1,5 +1,7 @@
 {% extends "base.html" %}
+{% block title %}{{ SITENAME }} - {{ article.title|striptags }}{% endblock %}
 {% block content_class %}article{% endblock content_class %}
+
 {% block head %}
   {{ super() }}
   {% if article.description %}

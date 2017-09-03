@@ -360,8 +360,22 @@ h6[id] a:focus::after, h6[id] a:hover::after {
 	margin:0;
 }
 
-#menu ul > li {
+#menu ul li {
 	display:inline-block;
+	text-transform:uppercase;
+	font-weight:600;
+	font-size:.8em;
+	margin-left:1em;
+}
+
+#menu ul li a {
+	padding:1em;
+}
+
+#menu ul li a:focus,
+#menu ul li a:hover {
+	background-color:rgba(0,0,0,.2);
+	text-decoration:none;
 }
 
 #tags {

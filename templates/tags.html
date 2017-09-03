@@ -3,7 +3,7 @@
 {% block content_class %}tags{% endblock content_class %}
 
 {% block content %}
-    <h2>Étiquettes</h2>
+    <h2 class="title">Étiquettes</h2>
     {%- for tag, articles in tags|sort %}
         <li><a href="{{ SITEURL }}/{{ tag.url }}">{{ tag }}</a> ({{ articles|count }})</li>
     {% endfor %}

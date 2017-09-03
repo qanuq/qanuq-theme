@@ -17,21 +17,17 @@
 {% endblock title_header %}
 
 {% block subtitle_header %}
+	Écrit
     {% if article.authors %}
-      Écrit par {% for author in article.authors %}
-          <a class="url fn" href="{{ SITEURL }}/{{ author.url }}">{{ author }}</a>
-		  {{ "," if not loop.last }}
+      par {% for author in article.authors %}
+          <a class="url fn" href="{{ SITEURL }}/{{ author.url }}">{{ author }}</a>,
         {% endfor %}
     {% endif %}
 	le
-    <time class="published" datetime="{{ article.date.isoformat() }}">
-      {{ article.locale_date }}
-    </time>
+    <time class="published" datetime="{{ article.date.isoformat() }}">{{ article.locale_date }}</time>
 	{% if article.modified %}
-	, modifié le
-    <time class="modified" datetime="{{ article.modified.isoformat() }}">
-      {{ article.locale_modified }}
-    </time>
+	modifié le
+    <time class="modified" datetime="{{ article.modified.isoformat() }}">{{ article.locale_modified }}</time>
 	{% endif %}
 	{% if article.category %}
 	    dans la catégorie

@@ -1,12 +1,10 @@
 {% extends "base.html" %}
 {% block content_class %}authors{% endblock content_class %}
 
-{# TODO auteurs #}
-{% block title %}{{ SITENAME }} - Authors{% endblock %}
+{% block title %}{{ SITENAME }} - Auteurs{% endblock %}
 
 {% block content %}
-	{# TODO auteurs #}
-    <h2>Authors on {{ SITENAME }}</h2>
+    <h2>Auteurs</h2>
 
     <ul>
     {%- for author, articles in authors|sort %}

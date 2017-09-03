@@ -12,8 +12,7 @@
 			<time datetime="{{ article.date.isoformat() }}">{{ article.locale_date }}</time>
 		</div>
 		<div class="pure-u-1 pure-u-md-3-4 title">
-			{# TODO Permalink string #}
-			<a href="{{ SITEURL }}/{{ article.url }}" rel="bookmark" title="Permalink to {{ article.title|striptags }}">{{ article.title }}</a>
+			<a href="{{ SITEURL }}/{{ article.url }}" rel="bookmark" title="Permalien vers {{ article.title|striptags }}">{{ article.title }}</a>
 		</div>
 	</div>
 	{% endfor %}

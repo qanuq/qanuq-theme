@@ -2,8 +2,7 @@
 {# TODO title ? #}
 {% block content_class %}period_archives{% endblock content_class %}
 {% block content %}
-{# TODO traduction #}
-<h2>Archives for {{ period | reverse | join(' ') }}</h2>
+<h2>Archives pour {{ period | reverse | join(' ') }}</h2>
 
 <dl>
 {% for article in dates %}

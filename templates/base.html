@@ -73,7 +73,7 @@
         {% endblock head %}
     </head>
 
-    <body id="index" class="home">
+    <body>
 
         <div id="header-container" class="pure-g">
             <div class="pure-u-1 pure-u-md-20-24 pure-u-lg-16-24">
@@ -81,7 +81,7 @@
                 <div class="pure-g">
                     <div class="pure-u-1 pure-u-md-1-2 pure-u-lg-1-2">
                         <div class="l-box">
-							<div>My Logo Here</div>
+							<div>Mon Logo Ici</div>
 						</div>
 					</div>
                     <div class="pure-u-1 pure-u-md-1-2 pure-u-lg-1-2">
@@ -110,7 +110,7 @@
 				</div>
 
                 {# TODO gérer le header #}
-                <header id="banner" class="body">
+                <header id="banner">
 					<div class="l-box">
 						<h1>{% block title_header %}<a href="{{ SITEURL }}/">{{ SITENAME }}</a>{% endblock title_header %}</h1>
 						<p class="subtitle">{% block subtitle_header %}{{ SITESUBTITLE }}{% endblock subtitle_header %}</p>
@@ -179,7 +179,6 @@
                          <ul>
                              <li><small><em>Proudly powered by <a href="http://getpelican.com/">Pelican</a></em></small></li>
                              <li><small><em>which takes great advantage of <a href="http://python.org">Python</a></em></small></li>
-                             {# <li><small><em>Theme and code by <a href="https://github.com/molivier">qanuq</a></em></small></li> #}
                              <li><small>{{ QANUQ_COPYRIGHT }}</small></li>
                              {% if QANUQ_FOOTER_HTML %}<li><small><em>{{ QANUQ_FOOTER_HTML }}</em></small></li>{% endif %}
                          </ul>

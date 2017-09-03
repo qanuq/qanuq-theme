@@ -146,7 +146,9 @@
                                 {% if FEED_ALL_RSS %}
                                 <li><a href="{{ FEED_DOMAIN }}/{{ FEED_ALL_RSS }}" type="application/rss+xml" rel="alternate">Flux RSS</a></li>
                                 {% endif %}
-                                {# TODO <li><a href="/sitemap.xml">sitemap</a></li> #}
+								{% if SITEMAP %}
+								<li><a href="{{ SITEURL }}/sitemap.xml">Sitemap</a></li>
+								{% endif %}
                             </ul>
                         </div>
                     </div>

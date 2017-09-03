@@ -135,16 +135,16 @@
                 <div class="pure-g">
                     <div class="pure-u-1-2 pure-u-md-1-2 pure-u-lg-1-4">
                         <div class="l-box">
-                            <div class="title">{{ QANUQ_SITEMAP_COLUMN_TITLE }}</div>
+                            <div class="title">Navigation</div>
                             <ul>
                                 {% for title, link in QANUQ_SITEMAP_MENU %}
                                 <li><a href="{{ SITEURL }}{{ link }}">{{ title }}</a></li>
                                 {% endfor %}
                                 {% if FEED_ALL_ATOM %}
-                                <li><a href="{{ FEED_DOMAIN }}/{{ FEED_ALL_ATOM }}" type="application/atom+xml" rel="alternate">{{ QANUQ_SITEMAP_ATOM_LINK }}</a></li>
+                                <li><a href="{{ FEED_DOMAIN }}/{{ FEED_ALL_ATOM }}" type="application/atom+xml" rel="alternate">Flux Atom</a></li>
                                 {% endif %}
                                 {% if FEED_ALL_RSS %}
-                                <li><a href="{{ FEED_DOMAIN }}/{{ FEED_ALL_RSS }}" type="application/rss+xml" rel="alternate">{{ QANUQ_SITEMAP_RSS_LINK }}</a></li>
+                                <li><a href="{{ FEED_DOMAIN }}/{{ FEED_ALL_RSS }}" type="application/rss+xml" rel="alternate">Flux RSS</a></li>
                                 {% endif %}
                                 {# TODO <li><a href="/sitemap.xml">sitemap</a></li> #}
                             </ul>
@@ -153,7 +153,7 @@
                     <div class="pure-u-1-2 pure-u-md-1-2 pure-u-lg-1-4">
                         <div class="l-box">
                          {% if SOCIAL %}
-                         <div class="title">{{ QANUQ_SOCIAL_COLUMN_TITLE }}</div>
+                         <div class="title">Social</div>
                          <ul>
                              {% for name, link in SOCIAL %}
                              <li><a href="{{ link }}">{{ name }}</a></li>
@@ -165,7 +165,7 @@
                     <div class="pure-u-1-2 pure-u-md-1-2 pure-u-lg-1-4">
                         <div class="l-box">
                          {% if LINKS %}
-                         <div class="title">{{ QANUQ_LINKS_COLUMN_TITLE }}</div>
+                         <div class="title">Liens</div>
                          <ul>
                              {% for name, link in LINKS %}
                              <li><a href="{{ link }}">{{ name }}</a></li>

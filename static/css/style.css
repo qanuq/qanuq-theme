@@ -184,6 +184,13 @@ body {
 	text-decoration:underline;
 }
 
+h2.title {
+	font-size:1.1em;
+	font-weight:600;
+	color:#333;
+	text-decoration:underline;
+}
+
 /* TODO voir dans quelle classe h2 se situe */
 h2[id], h2[id] a, h2[id] a:focus, h2[id] a:hover,
 h3[id], h3[id] a, h3[id] a:focus, h3[id] a:hover,

@@ -341,6 +341,30 @@ h6[id] a:focus::after, h6[id] a:hover::after {
 	font-weight:600;
 }
 
+#banner h1::after {
+	display:block;
+	content:" ";
+	margin-top:.125em;
+	width:10%;
+	border-bottom:.1em solid #fff;
+	margin-left:auto;
+	margin-right:auto;
+	margin-bottom:.125em;
+}
+
+#banner h1:hover::after {
+	width:50%;
+}
+
+#banner h1::after,
+#banner h1:hover::after {
+	-webkit-transition:width .5s ease-in-out;
+	-moz-transition:width .5s ease-in-out;
+	-ms-transition:width .5s ease-in-out;
+	-o-transition:width .5s ease-in-out;
+	transition:width .5s ease-in-out;
+}
+
 #banner .subtitle {
 	text-align:center;
 	font-size:0.9em;

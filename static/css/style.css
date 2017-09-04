@@ -287,7 +287,7 @@ h6[id] a:focus::after, h6[id] a:hover::after {
 
 
 
-/******************** article begin ********************/
+/******************** content begin ********************/
 
 .article div.toc {
 	font-weight:300;
@@ -295,8 +295,18 @@ h6[id] a:focus::after, h6[id] a:hover::after {
 	line-height:1.5em;
 }
 
+.tags ul,
+.categories ul {
+	line-height:1.5em;
+	padding-left:0;
+	margin:0.5em;
+	list-style-type:none;
+}
+
 .article div.toc,
-.article a {
+.article a,
+.tags a,
+.categories a {
 	color:#f33;
 }
 
@@ -311,16 +321,33 @@ h6[id] a:focus::after, h6[id] a:hover::after {
 	margin-bottom:1em;
 }
 
-.article a {
+.article a,
+.tags a,
+.categories a {
 	text-decoration:none;
 }
 
 .article a:focus,
-.article a:hover {
+.article a:hover,
+.tags a:focus,
+.tags a:hover,
+.categories a:focus,
+.categories a:hover {
 	text-decoration:underline;
 }
 
-/******************** article end ********************/
+span.count {
+	margin-left:1em;
+	color:#fff;
+	background-color:#999;
+	border-radius:0.25em;
+	padding:0.2em 0.6em;
+	font-weight:600;
+	font-size:0.6em;
+	vertical-align:text-top;
+}
+
+/******************** content end ********************/
 
 /******************** header begin ********************/
 

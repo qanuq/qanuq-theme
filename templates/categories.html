@@ -5,10 +5,13 @@
 {% block content %}
 {# TODO checker que tous les templates ont bien le même parent #}
 <h2 class="title">Catégories</h2>
-
+{% if categories %}
 <ul>
-{% for category, articles in categories %}
-    <li><a href="{{ SITEURL }}/{{ category.url }}">{{ category }}</a></li>
-{% endfor %}
+	{% for category, articles in categories %}
+	<li><a href="{{ SITEURL }}/{{ category.url }}">{{ category }}</a></li>
+	{% endfor %}
 </ul>
+{% else %}
+<p>Aucune catégorie existante.</p>
+{% endif %}
 {% endblock %}

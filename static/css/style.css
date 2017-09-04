@@ -296,6 +296,7 @@ h6[id] a:focus::after, h6[id] a:hover::after {
 }
 
 .tags ul,
+.authors ul,
 .categories ul {
 	line-height:1.5em;
 	padding-left:0;
@@ -306,6 +307,7 @@ h6[id] a:focus::after, h6[id] a:hover::after {
 .article div.toc,
 .article a,
 .tags a,
+.authors a,
 .categories a {
 	color:#f33;
 }
@@ -323,6 +325,7 @@ h6[id] a:focus::after, h6[id] a:hover::after {
 
 .article a,
 .tags a,
+.authors a,
 .categories a {
 	text-decoration:none;
 }
@@ -331,6 +334,8 @@ h6[id] a:focus::after, h6[id] a:hover::after {
 .article a:hover,
 .tags a:focus,
 .tags a:hover,
+.authors a:focus,
+.authors a:hover,
 .categories a:focus,
 .categories a:hover {
 	text-decoration:underline;

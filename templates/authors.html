@@ -3,11 +3,15 @@
 {% block content_class %}authors{% endblock content_class %}
 
 {% block content %}
-    <h2 class="title">Auteurs</h2>
+<h2 class="title">Auteurs</h2>
 
-    <ul>
-    {%- for author, articles in authors|sort %}
-        <li><a href="{{ SITEURL }}/{{ author.url }}">{{ author }}</a> ({{ articles|count }})</li>
-    {% endfor %}
-    </ul>
+{% if authors %}
+<ul>
+	{% for author, articles in authors|sort %}
+	<li><a href="{{ SITEURL }}/{{ author.url }}">{{ author }}</a> <span class="count">{{ articles|count }}</span></li>
+	{% endfor %}
+</ul>
+{% else %}
+<p>Aucun auteur existant.</p>
+{% endif %}
 {% endblock %}

@@ -1,6 +1,7 @@
 {% extends "base.html" %}
 {% block title %}Étiquettes - {{ super() }}{% endblock title %}
 {% block body_class %}tags{% endblock body_class %}
+{% block canonical_url %}{{ SITEURL }}/{{ output_file }}{% endblock canonical_url %}
 
 {% block content %}
 <h2 class="title">Étiquettes</h2>

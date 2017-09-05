@@ -4,11 +4,10 @@
 
 {% block content %}
 <h2 class="title">Archives pour {{ period | reverse | join(' ') }}</h2>
-
 <dl>
-{% for article in dates %}
-    <dt>{{ article.locale_date }}</dt>
-    <dd><a href="{{ SITEURL }}/{{ article.url }}">{{ article.title|striptags|e }}</a></dd>
-{% endfor %}
+	{% for article in dates %}
+	<dt>{{ article.locale_date }}</dt>
+	<dd><a href="{{ SITEURL }}/{{ article.url }}">{{ article.title|striptags|e }}</a></dd>
+	{% endfor %}
 </dl>
-{% endblock %}
+{% endblock content %}

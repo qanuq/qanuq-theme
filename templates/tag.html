@@ -1,6 +1,6 @@
 {% extends "index.html" %}
 {% block title %}{{ super }} - #{{ tag|striptags|e }}{% endblock title %}
-{% block content_class %}tag{% endblock content_class %}
+{% block body_class %}tag{% endblock body_class %}
 
 {% block content_title %}
 <h2 class="title">Publications pour l'étiquette #{{ tag|striptags|e }}</h2>

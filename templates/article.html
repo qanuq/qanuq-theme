@@ -1,6 +1,6 @@
 {% extends "base.html" %}
 {% block title %}{{ article.title|striptags|e }} - {{ super() }}{% endblock title %}
-{% block content_class %}article{% endblock content_class %}
+{% block body_class %}article{% endblock body_class %}
 
 {% block head %}
   {{ super() }}

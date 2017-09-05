@@ -61,8 +61,8 @@ body {
 #footer ul {
 	padding-left:0;
 	list-style-type:none;
-	margin-top:0;
-	margin-bottom:0;
+	margin:0;
+	line-height:inherit;
 }
 
 #footer a {
@@ -289,59 +289,43 @@ h6[id] a:focus::after, h6[id] a:hover::after {
 
 /******************** content begin ********************/
 
-.article div.toc {
+.toc {
 	font-weight:300;
 	font-size:0.9em;
 	line-height:1.5em;
 }
 
-.tags ul,
-.authors ul,
-.categories ul {
+.toc ul {
+	padding-left:2em;
+	list-style-position:inside;
+	list-style-type:upper-roman;
+}
+
+.toc > ul {
+	padding-left:0;
+	margin-top:1em;
+	margin-bottom:1em;
+}
+
+ul {
 	line-height:1.5em;
 	padding-left:0;
 	margin:0.5em;
 	list-style-type:none;
 }
 
-.article div.toc,
-.article a,
-.tags a,
-.authors a,
-.categories a {
+.toc,
+a {
 	color:#f33;
-}
-
-.article div.toc ul {
-	padding-left:2em;
-	list-style-position:inside;
-}
-
-.article div.toc > ul {
-	padding-left:0;
-	margin-top:1em;
-	margin-bottom:1em;
-}
-
-.article a,
-.tags a,
-.authors a,
-.categories a {
 	text-decoration:none;
 }
 
-.article a:focus,
-.article a:hover,
-.tags a:focus,
-.tags a:hover,
-.authors a:focus,
-.authors a:hover,
-.categories a:focus,
-.categories a:hover {
+a:focus,
+a:hover {
 	text-decoration:underline;
 }
 
-span.count {
+.count {
 	margin-left:1em;
 	color:#fff;
 	background-color:#999;

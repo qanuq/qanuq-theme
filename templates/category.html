@@ -1,6 +1,6 @@
 {% extends "index.html" %}
 {% block title %}{{ super() }} - Catégorie {{ category|striptags|e }}{% endblock title %}
-{% block content_class %}category{% endblock content_class %}
+{% block body_class %}category{% endblock body_class %}
 
 {% block content_title %}
 <h2 class="title">Publications pour la catégorie {{ category|striptags|e }}</h2>

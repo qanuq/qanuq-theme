@@ -1,5 +1,5 @@
 {% extends "base.html" %}
-{% block title %}{{ SITENAME }} - Auteurs{% endblock %}
+{% block title %}{{ super() }} - Auteurs{% endblock title %}
 {% block content_class %}authors{% endblock content_class %}
 
 {% block content %}
@@ -8,7 +8,7 @@
 {% if authors %}
 <ul>
 	{% for author, articles in authors|sort %}
-	<li><a href="{{ SITEURL }}/{{ author.url }}">{{ author }}</a> <span class="count">{{ articles|count }}</span></li>
+	<li><a href="{{ SITEURL }}/{{ author.url }}">{{ author|striptags|e }}</a> <span class="count">{{ articles|count }}</span></li>
 	{% endfor %}
 </ul>
 {% else %}

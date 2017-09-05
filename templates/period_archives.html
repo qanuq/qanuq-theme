@@ -1,5 +1,5 @@
 {% extends "base.html" %}
-{% block title %}{{ SITENAME }} - Archives pour {{ period | reverse | join(' ') }}{% endblock %}
+{% block title %}{{ super() }} - Archives pour {{ period | reverse | join(' ') }}{% endblock title %}
 {% block content_class %}period_archives{% endblock content_class %}
 
 {% block content %}
@@ -8,7 +8,7 @@
 <dl>
 {% for article in dates %}
     <dt>{{ article.locale_date }}</dt>
-    <dd><a href="{{ SITEURL }}/{{ article.url }}">{{ article.title }}</a></dd>
+    <dd><a href="{{ SITEURL }}/{{ article.url }}">{{ article.title|striptags|e }}</a></dd>
 {% endfor %}
 </dl>
 {% endblock %}

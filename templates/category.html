@@ -1,8 +1,8 @@
 {% extends "index.html" %}
-{% block title %}{{ SITENAME }} - Catégorie {{ category }}{% endblock %}
+{% block title %}{{ super() }} - Catégorie {{ category|striptags|e }}{% endblock title %}
 {% block content_class %}category{% endblock content_class %}
 
 {% block content_title %}
-<h2 class="title">Publications pour la catégorie {{ category }}</h2>
+<h2 class="title">Publications pour la catégorie {{ category|striptags|e }}</h2>
 {% endblock %}
 

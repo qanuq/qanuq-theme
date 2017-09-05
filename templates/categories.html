@@ -1,5 +1,5 @@
 {% extends "base.html" %}
-{% block title %}{{ SITENAME }} - Catégories{% endblock %}
+{% block title %}{{ super() }} - Catégories{% endblock title %}
 {% block content_class %}categories{% endblock content_class %}
 
 {% block content %}
@@ -8,7 +8,7 @@
 {% if categories %}
 <ul>
 	{% for category, articles in categories %}
-	<li><a href="{{ SITEURL }}/{{ category.url }}">{{ category }}</a></li>
+	<li><a href="{{ SITEURL }}/{{ category.url }}">{{ category|striptags|e }}</a></li>
 	{% endfor %}
 </ul>
 {% else %}

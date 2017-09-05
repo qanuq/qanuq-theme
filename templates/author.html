@@ -1,9 +1,9 @@
 {% extends "index.html" %}
-{% block title %}{{ SITENAME }} - Articles par {{ author }}{% endblock %}
+{% block title %}{{ super() }} - Articles par {{ author|striptags|e }}{% endblock title %}
 {% block content_class %}author{% endblock content_class %}
 
 {% block content_title %}
 
-<h2 class="title">Publications par {{ author }}</h2>
+<h2 class="title">Publications par {{ author|striptags|e }}</h2>
 {% endblock %}
 

@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html lang="{{ DEFAULT_LANG }}">
     <head>
-		<!-- TODO remove me : rendering {{ output_file }} -->
         {% block head %}
         <title>{% block title %}{{ SITENAME }}{% endblock title %}</title>
 
@@ -9,6 +8,8 @@
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta name="description" content="{% block description %}{% endblock description %}" />
         <meta name="keywords" content="{% block keywords %}{% endblock keywords %}" />
+        <link rel="canonical" href="{{ SITEURL }}/{{ output_file }}" />
+
         <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600" rel="stylesheet" />
         {# TODO https://stackoverflow.com/questions/25952907/favicon-ico-vs-link-rel-shortcut-icon #}
         <link rel="icon shortcut" href="{{ SITEURL }}/favicon.ico" />

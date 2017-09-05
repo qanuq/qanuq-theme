@@ -1,6 +1,7 @@
 {% extends "index.html" %}
 {% block title %}Catégorie {{ category|striptags|e }} - {{ super() }}{% endblock title %}
 {% block body_class %}category{% endblock body_class %}
+{% block canonical_url %}{{ SITEURL }}/{{ category.url }}{% endblock canonical_url %}
 
 {% block content_title %}
 <h2 class="title">Publications pour la catégorie {{ category|striptags|e }}</h2>

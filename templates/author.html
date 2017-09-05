@@ -1,6 +1,7 @@
 {% extends "index.html" %}
 {% block title %}Articles par {{ author|striptags|e }} - {{ super() }}{% endblock title %}
 {% block body_class %}author{% endblock body_class %}
+{% block canonical_url %}{{ SITEURL }}/{{ author.url }}{% endblock canonical_url %}
 
 {% block content_title %}
 <h2 class="title">Publications par {{ author|striptags|e }}</h2>

@@ -1,6 +1,7 @@
 {% extends "base.html" %}
 {% block title %}{{ article.title|striptags|e }} - {{ super() }}{% endblock title %}
 {% block body_class %}article{% endblock body_class %}
+{% block canonical_url %}{{ SITEURL }}/{{ article.url }}{% endblock canonical_url %}
 
 {% block head %}
   {{ super() }}

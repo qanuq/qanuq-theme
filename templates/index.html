@@ -3,7 +3,7 @@
 <section id="content">
 {% block content_title %}
 <h2 class="title">Dernières publications</h2>
-{% endblock %}
+{% endblock content_title %}
 {# TODO mettre à jour #post-list vs #content #}
 <div id="post-list">
 	{% for article in articles_page.object_list %}

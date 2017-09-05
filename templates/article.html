@@ -9,10 +9,10 @@
   {% endif %}
 
   {% for tag in article.tags %}
-    <meta name="tags" content="{{tag}}" />
+    <meta name="tags" content="{{ tag }}" />
   {% endfor %}
 
-{% endblock %}
+{% endblock head %}
 
 {% block title_header %}
 	<a href="{{ SITEURL }}/{{ article.url }}" rel="bookmark" title="Permalien vers {{ article.title|striptags }}">{{ article.title }}</a>
@@ -53,4 +53,4 @@
 <section id="content">
     {{ article.content }}
 </section>
-{% endblock %}
+{% endblock content %}

@@ -15,6 +15,9 @@
         <meta property="og:site_name" content="{{ SITENAME }}" />
         <meta property="og:description" content="{{ self.description() }}" />
         <meta property="og:url" content="{{ self.canonical_url() }}" />
+        {% block opengraph %}
+        <meta property="og:type" content="{% block og_type %}website{% endblock og_type %}" />
+        {% endblock opengraph %}
         <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600" rel="stylesheet" />
         {# TODO https://stackoverflow.com/questions/25952907/favicon-ico-vs-link-rel-shortcut-icon #}
         <link rel="icon shortcut" href="{{ SITEURL }}/favicon.ico" />

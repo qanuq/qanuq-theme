@@ -2,6 +2,24 @@
 {% block title %}{{ page.title|striptags|e }} - {{ super() }}{% endblock title %}
 {% block body_class %}page{% endblock body_class %}
 {% block canonical_url %}{{ SITEURL }}/{{ page.url }}{% endblock canonical_url %}
+{% block og_type %}article{% endblock og_type %}
+
+{% block opengraph %}
+  {{ super() }}
+
+  {% if page.date %}
+    <meta property="article:published_time" content="{{ page.date.isoformat() }}" />
+  {% endif %}
+
+  {% if page.modified %}
+    <meta property="article:modified_time" content="{{ page.modified.isoformat() }}" />
+  {% endif %}
+
+  {% for author in page.authors %}
+    <meta property="og:article:author" content="{{ author|striptags|e }}" />
+  {% endfor %}
+
+{% endblock opengraph %}
 
 {% block title_header %}
 	<a href="{{ SITEURL }}/{{ page.url }}" rel="bookmark" title="Permalien vers {{ page.title|striptags|e }}">{{ page.title|striptags|e }}</a>

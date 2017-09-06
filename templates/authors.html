@@ -1,6 +1,7 @@
 {% extends "base.html" %}
 {% block title %}Auteurs - {{ super() }}{% endblock title %}
 {% block body_class %}authors{% endblock body_class %}
+{% block description %}Liste d'auteurs pour les publications de {{ SITENAME }} {{ SITESUBTITLE }}{% endblock description %}
 {% block canonical_url %}{{ SITEURL }}/{{ output_file }}{% endblock canonical_url %}
 
 {% block content %}

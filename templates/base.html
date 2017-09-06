@@ -15,15 +15,24 @@
         <meta property="og:site_name" content="{{ SITENAME }}" />
         <meta property="og:description" content="{{ self.description() }}" />
         <meta property="og:url" content="{{ self.canonical_url() }}" />
-		{% block opengraph_image %}
-			{% if QANUQ_HEADER_IMAGE %}
-			<meta property="og:image" content="{{ SITEURL }}/images/{{ QANUQ_HEADER_IMAGE }}" />
-			{% endif %}
-		{% endblock opengraph_image %}
-
         {% block opengraph %}
         <meta property="og:type" content="{% block og_type %}website{% endblock og_type %}" />
         {% endblock opengraph %}
+		{% block opengraph_image %}
+			{% if QANUQ_HEADER_IMAGE %}
+			<meta property="og:image" content="{{ SITEURL }}/images/{{ QANUQ_HEADER_IMAGE }}" />
+			<meta name="twitter:image" content="{{ SITEURL }}/images/{{ QANUQ_HEADER_IMAGE }}" />
+			{% endif %}
+		{% endblock opengraph_image %}
+
+		<meta name="twitter:card" content="summary_large_image" />
+		<meta name="twitter:title" content="{{ self.title() }}" />
+		<meta name="twitter:description" content="{{ self.description() }}" />
+		{% if TWITTER_USERNAME %}
+		<meta name="twitter:site" content="@{{ TWITTER_USERNAME }}" />
+		<meta name="twitter:creator" content="@{{ TWITTER_USERNAME }}" />
+		{% endif %}
+
         <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600" rel="stylesheet" />
         {# TODO https://stackoverflow.com/questions/25952907/favicon-ico-vs-link-rel-shortcut-icon #}
         <link rel="icon shortcut" href="{{ SITEURL }}/favicon.ico" />

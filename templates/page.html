@@ -7,8 +7,10 @@
 {% block opengraph_image %}
   {% if page.headerimage %}
     <meta property="og:image" content="{{ SITEURL }}/images/{{ page.headerimage }}" />
+	<meta name="twitter:image" content="{{ SITEURL }}/images/{{ page.headerimage }}" />
   {% elif QANUQ_HEADER_IMAGE %}
     <meta property="og:image" content="{{ SITEURL }}/images/{{ QANUQ_HEADER_IMAGE }}" />
+	<meta name="twitter:image" content="{{ SITEURL }}/images/{{ QANUQ_HEADER_IMAGE }}" />
   {% endif %}
 {% endblock opengraph_image %}
 {% block opengraph %}

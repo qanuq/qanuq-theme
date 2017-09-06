@@ -1,6 +1,7 @@
 {% extends "index.html" %}
 {% block title %}#{{ tag|striptags|e }} - {{ super }}{% endblock title %}
 {% block body_class %}tag{% endblock body_class %}
+{% block description %}Liste de publications concernant l'étiquette #{{ tag|striptags|e }} de {{ SITENAME }} {{ SITESUBTITLE }}{% endblock description %}
 {% block canonical_url %}{{ SITEURL }}/{{ tag.url }}{% endblock canonical_url %}
 
 {% block content_title %}

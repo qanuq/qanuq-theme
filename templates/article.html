@@ -40,7 +40,7 @@
   {% endif %}
 
   {% for tag in article.tags %}
-    <meta property="article:tag" content="{{ tag }}" />
+    <meta property="article:tag" content="{{ tag|striptags|e }}" />
   {% endfor %}
 {% endblock opengraph %}
 
@@ -48,20 +48,20 @@
   {{ super() }}
 
   {% for tag in article.tags %}
-    <meta name="tags" content="{{ tag }}" />
+    <meta name="tags" content="{{ tag|striptags|e }}" />
   {% endfor %}
 
 {% endblock head %}
 
 {% block title_header %}
-	<a href="{{ SITEURL }}/{{ article.url }}" rel="bookmark" title="Permalien vers {{ article.title|striptags }}">{{ article.title }}</a>
+	<a href="{{ SITEURL }}/{{ article.url }}" rel="bookmark" title="Permalien vers {{ article.title|striptags|e }}">{{ article.title|striptags|e }}</a>
 {% endblock title_header %}
 
 {% block subtitle_header %}
 	Écrit
     {% if article.authors %}
       par {% for author in article.authors %}
-          <a class="url fn" href="{{ SITEURL }}/{{ author.url }}">{{ author }}</a>,
+          <a class="url fn" href="{{ SITEURL }}/{{ author.url }}">{{ author|striptags|e }}</a>,
         {% endfor %}
     {% endif %}
 	le
@@ -72,7 +72,7 @@
 	{% endif %}
 	{% if article.category %}
 	    dans la catégorie
-		<a href="{{ SITEURL }}/{{ article.category.url }}">{{ article.category }}</a>
+		<a href="{{ SITEURL }}/{{ article.category.url }}">{{ article.category|striptags|e }}</a>
 	{% endif %}
 {% endblock subtitle_header %}
 
@@ -81,7 +81,7 @@
 	<div id="tags">
 		<i class="fa fa-tags" aria-hidden="true"></i>
 		{% for tag in article.tags %}
-			<a href="{{ SITEURL }}/{{ tag.url }}">{{ tag }}</a>
+			<a href="{{ SITEURL }}/{{ tag.url }}">{{ tag|striptags|e }}</a>
 			{{ "," if not loop.last }}
 		{% endfor %}
 	</div>

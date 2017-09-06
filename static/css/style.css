@@ -342,6 +342,7 @@ a:hover {
 
 #header-container {
 	color:#fff;
+	text-shadow:1px 1px 1px rgba(0, 0, 0, 1);
 }
 
 #header-container a {
@@ -352,6 +353,12 @@ a:hover {
 #header-container a:hover,
 #header-container a:focus {
 	text-decoration:underline;
+}
+
+#header-container.image {
+	background-position:center center;
+	background-size:cover;
+	background-repeat:no-repeat;
 }
 
 #banner h1 a:hover,

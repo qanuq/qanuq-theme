@@ -4,6 +4,13 @@
 {% block canonical_url %}{{ SITEURL }}/{{ article.url }}{% endblock canonical_url %}
 {% block og_type %}article{% endblock og_type %}
 
+{% block opengraph_image %}
+  {% if article.headerimage %}
+    <meta property="og:image" content="{{ SITEURL }}/images/{{ article.headerimage }}" />
+  {% elif QANUQ_HEADER_IMAGE %}
+    <meta property="og:image" content="{{ SITEURL }}/images/{{ QANUQ_HEADER_IMAGE }}" />
+  {% endif %}
+{% endblock opengraph_image %}
 {% block opengraph %}
   {{ super() }}
 
@@ -74,6 +81,20 @@
 	</div>
 	{% endif %}
 {% endblock extra_header %}
+
+{% block header_class -%}
+{%- if article.headerimage or QANUQ_HEADER_IMAGE -%}
+image
+{%- endif %}
+{%- endblock header_class %}"
+
+{% block header_style -%}
+{%- if article.headerimage -%}
+background-image:url('{{ SITEURL }}/images/{{ article.headerimage }}');
+{%- elif QANUQ_HEADER_IMAGE %}
+background-image:url('{{ SITEURL }}/images/{{ QANUQ_HEADER_IMAGE }}');
+{%- endif %}
+{%- endblock header_style %}
 
 {% block content %}
 <section id="content">

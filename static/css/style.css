@@ -144,11 +144,9 @@ body {
 }
 /******************** footer end ********************/
 
-#post-list {
-	margin:0;
-}
-
-#post-list .time {
+.archives #content-container .col-date,
+.home #content-container .col-date,
+.period_archives #content-container .col-date {
 	font-size:0.8em;
 	font-weight:300;
 	overflow:hidden;
@@ -156,11 +154,12 @@ body {
 	white-space:nowrap;
 }
 
-#post-list .time time {
-	margin-right:1.5em;
-}
-
-#post-list .title {
+.archives #content-container .col-title,
+.category #content-container .col-title,
+.tag #content-container .col-title,
+.author #content-container .col-title,
+.home #content-container .col-title,
+.period_archives #content-container .col-title {
 	font-size:0.9em;
 }
 
@@ -171,17 +170,14 @@ body {
 	font-weight:300;
 }
 
-#post-list, #paginator {
+.archives #content-container,
+.category #content-container,
+.tag #content-container,
+.author #content-container,
+.home #content-container,
+.period_archives #content-container,
+#paginator {
 	line-height:2em;
-}
-
-#post-list .title a, #paginator a {
-	color:#f33;
-	text-decoration:none;
-}
-
-#post-list .title a:hover, #post-list .title a:focus, #paginator a:hover, #paginator a:focus {
-	text-decoration:underline;
 }
 
 h2.title {

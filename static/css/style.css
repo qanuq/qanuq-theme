@@ -192,6 +192,7 @@ header > div {
 	margin-bottom:1em;
 }
 
+/* TODO gérer le numéros de ligne et autres options de pygments. */
 pre {
 	padding:2em;
 	background-image:url('../images/background-pattern.png');
@@ -429,4 +430,9 @@ h6 a:focus::after, h6 a:hover::after {
 
 /******************** titles end ********************/
 
+
+
+/* TODO gérer img, blockquote, tester toutes les commandes markdown */
+/* TODO gérer le resizing ? */
+/* TODO passer en lesscss pour les variables et imbrications. */
 

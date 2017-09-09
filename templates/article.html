@@ -103,7 +103,9 @@ background-image:url('{{ SITEURL }}/images/{{ QANUQ_HEADER_IMAGE }}');
 {%- endblock header_style %}
 
 {% block content %}
+<article>
     {{ article.content }}
+</article>
 
 	{% include "disqus_script.html" %}
 {% endblock content %}

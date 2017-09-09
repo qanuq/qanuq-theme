@@ -183,81 +183,6 @@ body {
 	line-height:2em;
 }
 
-h2.title {
-	font-size:1.1em;
-	font-weight:600;
-	color:#333;
-	margin-top:0;
-	margin-bottom:1em;
-}
-
-/* TODO voir dans quelle classe h2 se situe */
-h2[id], h2[id] a, h2[id] a:focus, h2[id] a:hover,
-h3[id], h3[id] a, h3[id] a:focus, h3[id] a:hover,
-h4[id], h4[id] a, h4[id] a:focus, h4[id] a:hover,
-h5[id], h5[id] a, h5[id] a:focus, h5[id] a:hover,
-h6[id], h6[id] a, h6[id] a:focus, h6[id] a:hover {
-	text-decoration:none;
-	display:block;
-	font-weight:600;
-	color:#444;
-}
-
-h2[id], h3[id], h4[id], h5[id], h6[id] {
-	margin-top:1em;
-	margin-bottom:1em;
-}
-
-h2[id], h2[id] a {
-	font-size:1.25em;
-}
-h3[id], h3[id] a {
-	font-size:1.2em;
-}
-h4[id], h4[id] a {
-	font-size:1.15em;
-}
-h5[id], h5[id] a {
-	font-size:1.1em;
-}
-h6[id], h6[id] a {
-	font-size:1.05em;
-}
-h2[id]::after,
-h3[id]::after,
-h4[id]::after,
-h5[id]::after,
-h6[id]::after {
-	display:block;
-	content:" ";
-	margin-top:.125em;
-	width:100%;
-}
-h2[id]::after {
-	border-bottom:.5em solid #f33;
-}
-h3[id]::after {
-	border-bottom:.4em solid #f53;
-}
-h4[id]::after {
-	border-bottom:.3em solid #f73;
-}
-h5[id]::after {
-	border-bottom:.2em solid #f93;
-}
-h6[id]::after {
-	border-bottom:.1em solid #fb3;
-}
-h2[id] a:focus::after, h2[id] a:hover::after,
-h3[id] a:focus::after, h3[id] a:hover::after,
-h4[id] a:focus::after, h4[id] a:hover::after,
-h5[id] a:focus::after, h5[id] a:hover::after,
-h6[id] a:focus::after, h6[id] a:hover::after {
-	content:"\f0c1";
-	font-family:"FontAwesome";
-	float:right;
-}
-
 ::selection {
 	background:#f83; /* Safari */
 	color:#FFF;
@@ -353,6 +278,7 @@ a:hover {
 #header-container a {
 	color:#fff;
 	text-decoration:none;
+	background-color:transparent;
 }
 
 #header-container a:hover,
@@ -364,28 +290,6 @@ a:hover {
 	background-position:center center;
 	background-size:cover;
 	background-repeat:no-repeat;
-}
-
-#banner h1 a:hover,
-#banner h1 a:focus {
-	text-decoration:none;
-}
-
-#banner h1 {
-	text-align:center;
-	font-size:1.75em;
-	font-weight:600;
-}
-
-#banner h1::after {
-	display:block;
-	content:" ";
-	margin-top:.125em;
-	width:10%;
-	border-bottom:.1em solid #fff;
-	margin-left:auto;
-	margin-right:auto;
-	margin-bottom:.125em;
 }
 
 #banner .subtitle {
@@ -432,5 +336,100 @@ a:hover {
 }
 
 /******************** header end ********************/
+
+/******************** titles begin ********************/
+
+#banner h1 a:hover,
+#banner h1 a:focus,
+#banner h1 {
+	text-decoration:none;
+	background-color:transparent;
+}
+
+#banner h1 {
+	text-align:center;
+	font-size:1.75em;
+	font-weight:600;
+}
+
+#banner h1::after {
+	display:block;
+	content:" ";
+	margin-top:.125em;
+	width:10%;
+	border-bottom:.1em solid #fff;
+	margin-left:auto;
+	margin-right:auto;
+	margin-bottom:.125em;
+}
+
+/* ailleurs, les titres 1 ne sont pas admis, petit rappel graphique */
+h1, h1 a, h1::after {
+	color:#000;
+	background-color:red;
+}
+
+h1::after {
+	content:"Les titres 1 ne doivent être utilisés que dans le header !";
+	display:block;
+	font-size:0.5em;
+}
+
+h2.title {
+	font-size:1.1em;
+	font-weight:600;
+	color:#333;
+	margin-top:0;
+	margin-bottom:1em;
+}
+
+h2.title::after { content:none; }
+
+h2, h2 a, h2 a:focus, h2 a:hover,
+h3, h3 a, h3 a:focus, h3 a:hover,
+h4, h4 a, h4 a:focus, h4 a:hover,
+h5, h5 a, h5 a:focus, h5 a:hover,
+h6, h6 a, h6 a:focus, h6 a:hover {
+	text-decoration:none;
+	display:block;
+	font-weight:600;
+	color:#444;
+}
+
+h2, h3, h4, h5, h6 {
+	margin-top:1em;
+	margin-bottom:1em;
+}
+
+h2 { font-size:1.25em; }
+h3 { font-size:1.2em; }
+h4 { font-size:1.15em; }
+h5 { font-size:1.1em; }
+h6 { font-size:1.05em; }
+
+h2::after, h3::after, h4::after, h5::after, h6::after {
+	display:block;
+	content:" ";
+	margin-top:.125em;
+	width:100%;
+}
+
+h2::after { border-bottom:.5em solid #f33; }
+h3::after { border-bottom:.4em solid #f53; }
+h4::after { border-bottom:.3em solid #f73; }
+h5::after { border-bottom:.2em solid #f93; }
+h6::after { border-bottom:.1em solid #fb3; }
+
+h2 a:focus::after, h2 a:hover::after,
+h3 a:focus::after, h3 a:hover::after,
+h4 a:focus::after, h4 a:hover::after,
+h5 a:focus::after, h5 a:hover::after,
+h6 a:focus::after, h6 a:hover::after {
+	content:"\f0c1";
+	font-family:"FontAwesome";
+	float:right;
+}
+
+/******************** titles end ********************/
 
 

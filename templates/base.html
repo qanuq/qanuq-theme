@@ -157,45 +157,45 @@
             <div class="pure-u-1 pure-u-md-20-24 pure-u-lg-16-24">
                 <div class="pure-g">
                     <div class="pure-u-1-2 pure-u-md-1-2 pure-u-lg-1-4">
-                        <div class="l-box">
-                            <div class="title">Navigation</div>
-                            <ul>
-                                {% for title, link in QANUQ_SITEMAP_MENU %}
-                                <li><a href="{{ SITEURL }}{{ link }}">{{ title }}</a></li>
-                                {% endfor %}
-                                {% if FEED_ALL_ATOM %}
-                                <li><a href="{{ FEED_DOMAIN }}/{{ FEED_ALL_ATOM }}" type="application/atom+xml" rel="alternate">Flux Atom</a></li>
-                                {% endif %}
-                                {% if FEED_ALL_RSS %}
-                                <li><a href="{{ FEED_DOMAIN }}/{{ FEED_ALL_RSS }}" type="application/rss+xml" rel="alternate">Flux RSS</a></li>
-                                {% endif %}
-								{% if SITEMAP %}
-								<li><a href="{{ SITEURL }}/sitemap.xml">Sitemap</a></li>
+						<div class="l-box">
+							<dl>
+								<dt>Navigation</dt>
+								{% for title, link in QANUQ_SITEMAP_MENU %}
+								<dd><a href="{{ SITEURL }}{{ link }}">{{ title }}</a></dd>
+								{% endfor %}
+								{% if FEED_ALL_ATOM %}
+								<dd><a href="{{ FEED_DOMAIN }}/{{ FEED_ALL_ATOM }}" type="application/atom+xml" rel="alternate">Flux Atom</a></dd>
 								{% endif %}
-                            </ul>
+								{% if FEED_ALL_RSS %}
+								<dd><a href="{{ FEED_DOMAIN }}/{{ FEED_ALL_RSS }}" type="application/rss+xml" rel="alternate">Flux RSS</a></dd>
+								{% endif %}
+								{% if SITEMAP %}
+								<dd><a href="{{ SITEURL }}/sitemap.xml">Sitemap</a></dd>
+								{% endif %}
+							</dl>
                         </div>
                     </div>
                     <div class="pure-u-1-2 pure-u-md-1-2 pure-u-lg-1-4">
                         <div class="l-box">
                          {% if SOCIAL %}
-                         <div class="title">Social</div>
-                         <ul>
+						 <dl>
+							 <dt>Social</dt>
                              {% for name, link in SOCIAL %}
-                             <li><a href="{{ link }}">{{ name }}</a></li>
+                             <dd><a href="{{ link }}">{{ name }}</a></dd>
                              {% endfor %}
-                         </ul>
+						 </dl>
                          {% endif %}
                         </div>
                     </div>
                     <div class="pure-u-1-2 pure-u-md-1-2 pure-u-lg-1-4">
                         <div class="l-box">
                          {% if LINKS %}
-                         <div class="title">Liens</div>
-                         <ul>
+						 <dl>
+                         <dt>Liens</dt>
                              {% for name, link in LINKS %}
-                             <li><a href="{{ link }}">{{ name }}</a></li>
+							 <dd><a href="{{ link }}">{{ name }}</a></dd>
                              {% endfor %}
-                         </ul>
+						 </dl>
                          {% endif %}
                         </div>
                     </div>

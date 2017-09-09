@@ -15,12 +15,12 @@ header {
 	min-height:360px;
 }
 
-header > div{
+header > div {
 	margin-left:auto;
 	margin-right:auto;
 }
 
-#content {
+#content > div {
 	background-color:#fff;
 	margin-left:auto;
 	margin-right:auto;
@@ -32,7 +32,7 @@ header > div{
 	padding: 1em;
 }
 
-#content > .l-box {
+#content > div > .l-box {
 	border-left:1px solid rgba(0,0,0,.1);
 	border-right:1px solid rgba(0,0,0,.1);
 }

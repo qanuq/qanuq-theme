@@ -90,7 +90,7 @@
 
     <body class="{% block body_class %}{% endblock body_class %}">
 
-		<div id="header-container"
+		<header
 			class="pure-g {% block header_class -%}
 			{%- if QANUQ_HEADER_IMAGE -%}
 			image
@@ -133,16 +133,16 @@
 					</div>
 				</div>
 
-                <header id="banner">
+                <div id="banner">
 					<div class="l-box">
 						<h1>{% block title_header %}<a href="{{ SITEURL }}/">{{ SITENAME }}</a>{% endblock title_header %}</h1>
 						<p class="subtitle">{% block subtitle_header %}{{ SITESUBTITLE }}{% endblock subtitle_header %}</p>
 						{% block extra_header %}{% endblock extra_header %}
 					</div>
-                </header>
+                </div>
 
             </div>
-        </div>
+        </header>
 
         <div class="pure-g">
 			<section id="content" class="pure-u-1 pure-u-md-20-24 pure-u-lg-16-24">

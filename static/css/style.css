@@ -53,9 +53,13 @@ body {
 	margin-right:auto;
 }
 
-#footer .title {
+#footer dt {
 	text-transform:uppercase;
 	font-weight:600;
+}
+
+#footer dl,	#footer dd {
+	margin:0;
 }
 
 #footer ul {

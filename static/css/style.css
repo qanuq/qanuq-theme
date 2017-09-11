@@ -328,6 +328,7 @@ header.image {
 	text-align:right;
 	font-size:0.8em;
 	font-weight:600;
+	margin-top:8em;
 }
 
 /******************** header end ********************/
@@ -347,6 +348,8 @@ header.image {
 	text-align:center;
 	font-size:1.75em;
 	font-weight:600;
+	margin-top:2em;
+	margin-bottom:0.5em;
 }
 
 #banner h1::after {

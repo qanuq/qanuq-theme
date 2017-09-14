@@ -160,17 +160,23 @@
 						<div class="l-box">
 							<dl>
 								<dt>Navigation</dt>
-								{% for title, link in QANUQ_SITEMAP_MENU %}
-								<dd><a href="{{ SITEURL }}{{ link }}">{{ title }}</a></dd>
-								{% endfor %}
-								{% if FEED_ALL_ATOM %}
-								<dd><a href="{{ FEED_DOMAIN }}/{{ FEED_ALL_ATOM }}" type="application/atom+xml" rel="alternate">Flux Atom</a></dd>
+								{% if ARCHIVES_SAVE_AS %}
+								<dd><a href="{{ SITEURL }}/{{ ARCHIVES_SAVE_AS }}" class="nav-archives">Archives</a></dd>
 								{% endif %}
-								{% if FEED_ALL_RSS %}
-								<dd><a href="{{ FEED_DOMAIN }}/{{ FEED_ALL_RSS }}" type="application/rss+xml" rel="alternate">Flux RSS</a></dd>
+								{% if AUTHORS_SAVE_AS %}
+								<dd><a href="{{ SITEURL }}/{{ AUTHORS_SAVE_AS }}" class="nav-auteurs">Auteurs</a></dd>
+								{% endif %}
+								{% if CATEGORIES_SAVE_AS %}
+								<dd><a href="{{ SITEURL }}/{{ CATEGORIES_SAVE_AS }}" class="nav-categories">Catégories</a></dd>
+								{% endif %}
+								{% if TAGS_SAVE_AS %}
+								<dd><a href="{{ SITEURL }}/{{ TAGS_SAVE_AS }}" class="nav-etiquettes">Étiquettes</a></dd>
+								{% endif %}
+								{% if FEED_DOMAIN and FEED_ATOM %}
+								<dd><a href="{{ FEED_DOMAIN }}/{{ FEED_ATOM }}" class="nav-atom" type="application/atom+xml" rel="alternate">Flux Atom</a></dd>
 								{% endif %}
 								{% if SITEMAP %}
-								<dd><a href="{{ SITEURL }}/sitemap.xml">Sitemap</a></dd>
+								<dd><a href="{{ SITEURL }}/sitemap.{{ SITEMAP.format }}" class="nav-sitemap">Sitemap</a></dd>
 								{% endif %}
 							</dl>
                         </div>

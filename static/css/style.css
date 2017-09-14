@@ -78,73 +78,77 @@ header > div {
 	text-decoration:underline;
 }
 
-#footer a[type*="atom+xml"]::before,
-#footer a[type*="rss+xml"]::before,
-#footer a[href$="/archives.html"]::before,
-#footer a[href$="/auteurs.html"]::before,
-#footer a[href$="/sitemap.xml"]::before,
-#footer a[href$="/etiquettes.html"]::before,
-#footer a[href*="500px"]::before,
-#footer a[href*="facebook"]::before,
-#footer a[href*="github"]::before,
-#footer a[href*="linkedin"]::before,
-#footer a[href*="paypal"]::before,
-#footer a[href*="twitter"]::before {
+#footer a.nav-atom::before,
+#footer a.nav-archives::before,
+#footer a.nav-auteurs::before,
+#footer a.nav-sitemap::before,
+#footer a.nav-etiquettes::before,
+#footer a.nav-categories::before,
+#footer a[href*="500px.com/"]::before,
+#footer a[href*="facebook.com/"]::before,
+#footer a[href*="github.com/"]::before,
+#footer a[href*="linkedin.com/"]::before,
+#footer a[href*="paypal.me/"]::before,
+#footer a[href*="twitter.com/"]::before {
 	font-family:"FontAwesome";
-	margin-right:0.5em;
+	margin-right:0.25em;
 	display:inline-block;
 	color:#eee;
+	width:1.25em;
 }
 
-#footer a[href$="/archives.html"]::before {
+#footer a.nav-atom::before {
+	content:"\f09e";
+}
+
+#footer a.nav-archives::before {
 	content:"\f187";
 }
 
-#footer a[href$="/auteurs.html"]::before {
-	content:"\f040";
+#footer a.nav-auteurs::before {
+	content:"\f007";
 }
 
-#footer a[href$="/sitemap.xml"]::before {
+#footer a.nav-sitemap::before {
 	content:"\f0e8";
 }
 
-#footer a[href$="/etiquettes.html"]::before {
+#footer a.nav-etiquettes::before {
 	content:"\f02c";
 }
 
-#footer a[href*="500px"]::before {
+#footer a.nav-categories::before {
+	content:"\f040";
+}
+
+#footer a[href*="500px.com/"]::before {
 	content:"\f26e";
 }
 
-#footer a[href*="facebook"]::before {
+#footer a[href*="facebook.com/"]::before {
 	content:"\f230";
 }
 
-#footer a[href*="github"]::before {
+#footer a[href*="github.com/"]::before {
 	content:"\f09b";
 }
 
-#footer a[href*="linkedin"]::before {
+#footer a[href*="linkedin.com/"]::before {
 	content:"\f0e1";
 }
 
-#footer a[href*="paypal"] {
+#footer a[href*="paypal.me/"] {
 	color:#f96;
 	font-weight:600;
 }
 
-#footer a[href*="paypal"]::before {
+#footer a[href*="paypal.me/"]::before {
 	content:"\f1ed";
 	color:#f96;
 }
 
-#footer a[href*="twitter"]::before {
+#footer a[href*="twitter.com/"]::before {
 	content:"\f099";
-}
-
-#footer a[type*="atom+xml"]::before,
-#footer a[type*="rss+xml"]::before {
-	content:"\f09e";
 }
 /******************** footer end ********************/
 

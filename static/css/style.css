@@ -80,10 +80,10 @@ header > div {
 
 #footer a[type*="atom+xml"]::before,
 #footer a[type*="rss+xml"]::before,
-#footer a[href*="/archives"]::before,
-#footer a[href*="/authors"]::before,
-#footer a[href*="/sitemap.xml"]::before,
-#footer a[href*="/tags"]::before,
+#footer a[href$="/archives.html"]::before,
+#footer a[href$="/auteurs.html"]::before,
+#footer a[href$="/sitemap.xml"]::before,
+#footer a[href$="/etiquettes.html"]::before,
 #footer a[href*="500px"]::before,
 #footer a[href*="facebook"]::before,
 #footer a[href*="github"]::before,
@@ -96,19 +96,19 @@ header > div {
 	color:#eee;
 }
 
-#footer a[href*="/archives"]::before {
+#footer a[href$="/archives.html"]::before {
 	content:"\f187";
 }
 
-#footer a[href*="/authors"]::before {
+#footer a[href$="/auteurs.html"]::before {
 	content:"\f040";
 }
 
-#footer a[href*="/sitemap.xml"]::before {
+#footer a[href$="/sitemap.xml"]::before {
 	content:"\f0e8";
 }
 
-#footer a[href*="/tags"]::before {
+#footer a[href$="/etiquettes.html"]::before {
 	content:"\f02c";
 }
 

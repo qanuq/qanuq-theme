@@ -6,5 +6,7 @@
 
 {% block content_title %}
 <h2 class="title">Publications par {{ author|striptags|e }}</h2>
+{# TODO gérer le liens atom #}
+TODO {{ AUTHOR_FEED_ATOM|format(author.slug) }}
 {% endblock content_title %}
 

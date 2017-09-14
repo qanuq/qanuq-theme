@@ -439,3 +439,10 @@ h6 a:focus::after, h6 a:hover::after {
 /* TODO gérer le resizing ? */
 /* TODO passer en lesscss pour les variables et imbrications. */
 
+noscript {
+	color:#f33;
+	text-align:center;
+	display:block;
+	margin:1em auto;
+}
+

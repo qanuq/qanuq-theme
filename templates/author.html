@@ -6,7 +6,8 @@
 
 {% block content_title %}
 <h2 class="title">Publications par {{ author|striptags|e }}</h2>
-{# TODO gérer le liens atom #}
-TODO {{ AUTHOR_FEED_ATOM|format(author.slug) }}
+{% if SITEURL and AUTHOR_FEED_ATOM %}
+<a href="{{ SITEURL }}/{{ AUTHOR_FEED_ATOM|format(author.slug) }}" class="atom">Flux Atom pour cet auteur <i class="fa fa-rss fa-lg" aria-hidden="true"></i></a>
+{% endif %}
 {% endblock content_title %}
 

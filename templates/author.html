@@ -1,11 +1,11 @@
 {% extends "index.html" %}
-{% block title %}Articles par {{ author|striptags|e }} - {{ super() }}{% endblock title %}
+{% block title %}Articles par {{ author }} - {{ super() }}{% endblock title %}
 {% block body_class %}author{% endblock body_class %}
-{% block description %}Liste de publications concernant l'auteur {{ author|striptags|e }} de {{ SITENAME }} {{ SITESUBTITLE }}{% endblock description %}
+{% block description %}Liste de publications concernant l'auteur {{ author }} de {{ SITENAME }} {{ SITESUBTITLE }}{% endblock description %}
 {% block canonical_url %}{{ SITEURL }}/{{ author.url }}{% endblock canonical_url %}
 
 {% block content_title %}
-<h2 class="title">Publications par {{ author|striptags|e }}</h2>
+<h2 class="title">Publications par {{ author }}</h2>
 {% if SITEURL and AUTHOR_FEED_ATOM %}
 <a href="{{ SITEURL }}/{{ AUTHOR_FEED_ATOM|format(author.slug) }}" class="atom">Flux Atom pour cet auteur <i class="fa fa-rss fa-lg" aria-hidden="true"></i></a>
 {% endif %}

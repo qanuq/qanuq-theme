@@ -1,11 +1,11 @@
 {% extends "index.html" %}
-{% block title %}#{{ tag|striptags|e }} - {{ super }}{% endblock title %}
+{% block title %}#{{ tag }} - {{ super }}{% endblock title %}
 {% block body_class %}tag{% endblock body_class %}
-{% block description %}Liste de publications concernant l'étiquette #{{ tag|striptags|e }} de {{ SITENAME }} {{ SITESUBTITLE }}{% endblock description %}
+{% block description %}Liste de publications concernant l'étiquette #{{ tag }} de {{ SITENAME }} {{ SITESUBTITLE }}{% endblock description %}
 {% block canonical_url %}{{ SITEURL }}/{{ tag.url }}{% endblock canonical_url %}
 
 {% block content_title %}
-<h2 class="title">Publications pour l'étiquette #{{ tag|striptags|e }}</h2>
+<h2 class="title">Publications pour l'étiquette #{{ tag }}</h2>
 {% if SITEURL and TAG_FEED_ATOM %}
 <a href="{{ SITEURL }}/{{ TAG_FEED_ATOM|format(tag.slug) }}" class="atom">Flux Atom pour cette étiquette <i class="fa fa-rss fa-lg" aria-hidden="true"></i></a>
 {% endif %}

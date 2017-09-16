@@ -2,7 +2,7 @@
 {% block title %}Archives pour {{ period | reverse | join(' ') }} - {{ super() }}{% endblock title %}
 {% block body_class %}period_archives{% endblock body_class %}
 {% block description %}Archives pour {{ period | reverse | join(' ') }} de {{ SITENAME }} {{ SITESUBTITLE }}{% endblock description %}
-{# TODO vérifier que cette URL est ok #}
+
 {% block canonical_url %}{{ SITEURL }}/{{ output_file }}{% endblock canonical_url %}
 
 {% block content %}

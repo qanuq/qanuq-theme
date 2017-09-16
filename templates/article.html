@@ -32,15 +32,15 @@
   {% endif %}
 
   {% for author in article.authors %}
-    <meta property="og:article:author" content="{{ author|striptags|e }}" />
+    <meta property="og:article:author" content="{{ author }}" />
   {% endfor %}
 
   {% if article.category %}
-    <meta property="article:section" content="{{ article.category|striptags|e }}" />
+    <meta property="article:section" content="{{ article.category }}" />
   {% endif %}
 
   {% for tag in article.tags %}
-    <meta property="article:tag" content="{{ tag|striptags|e }}" />
+    <meta property="article:tag" content="{{ tag }}" />
   {% endfor %}
 {% endblock opengraph %}
 
@@ -48,7 +48,7 @@
   {{ super() }}
 
   {% for tag in article.tags %}
-    <meta name="tags" content="{{ tag|striptags|e }}" />
+    <meta name="tags" content="{{ tag }}" />
   {% endfor %}
 
 {% endblock head %}
@@ -61,7 +61,7 @@
 	Écrit
     {% if article.authors %}
       par {% for author in article.authors %}
-          <a class="url fn" href="{{ SITEURL }}/{{ author.url }}">{{ author|striptags|e }}</a>,
+          <a class="url fn" href="{{ SITEURL }}/{{ author.url }}">{{ author }}</a>,
         {% endfor %}
     {% endif %}
 	le
@@ -72,7 +72,7 @@
 	{% endif %}
 	{% if article.category %}
 	    dans la catégorie
-		<a href="{{ SITEURL }}/{{ article.category.url }}">{{ article.category|striptags|e }}</a>
+		<a href="{{ SITEURL }}/{{ article.category.url }}">{{ article.category }}</a>
 	{% endif %}
 {% endblock subtitle_header %}
 
@@ -81,7 +81,7 @@
 	<div id="tags">
 		<i class="fa fa-tags" aria-hidden="true"></i>
 		{% for tag in article.tags %}
-			<a href="{{ SITEURL }}/{{ tag.url }}">{{ tag|striptags|e }}</a>
+			<a href="{{ SITEURL }}/{{ tag.url }}">{{ tag }}</a>
 			{{ "," if not loop.last }}
 		{% endfor %}
 	</div>

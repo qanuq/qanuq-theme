@@ -5,8 +5,9 @@
 {% block canonical_url %}{{ SITEURL }}/{{ category.url }}{% endblock canonical_url %}
 
 {% block content_title %}
-<h2 class="title">Publications pour la catégorie {{ category }}</h2>
-{% if SITEURL and CATEGORY_FEED_ATOM %}
-<a href="{{ SITEURL }}/{{ CATEGORY_FEED_ATOM|format(category.slug) }}" class="atom">Flux Atom pour cette catégorie <i class="fa fa-rss fa-lg" aria-hidden="true"></i></a>
-{% endif %}
+  <h2 class="title">Publications pour la catégorie {{ category }}</h2>
+  {% if SITEURL and CATEGORY_FEED_ATOM %}
+    <a href="{{ SITEURL }}/{{ CATEGORY_FEED_ATOM|format(category.slug) }}"
+       class="atom">Flux Atom pour cette catégorie <i class="fa fa-rss fa-lg" aria-hidden="true"></i></a>
+  {% endif %}
 {% endblock content_title %}

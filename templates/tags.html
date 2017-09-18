@@ -5,14 +5,15 @@
 {% block canonical_url %}{{ SITEURL }}/{{ output_file }}{% endblock canonical_url %}
 
 {% block content %}
-<h2 class="title">Étiquettes</h2>
-{% if tags %}
-<ul>
-	{% for tag, articles in tags|sort %}
-	<li><a href="{{ SITEURL }}/{{ tag.url }}">{{ tag }}</a> <span class="count">{{ articles|count }}</span></li>
-	{% endfor %}
-</ul>
-{% else %}
-	<p>Aucune étiquette existante.</p>
-{% endif %}
+  <h2 class="title">Étiquettes</h2>
+  {% if tags %}
+    <ul>
+      {% for tag, articles in tags|sort %}
+        <li><a href="{{ SITEURL }}/{{ tag.url }}">{{ tag }}</a>
+          <span class="count">{{ articles|count }}</span></li>
+      {% endfor %}
+    </ul>
+  {% else %}
+    <p>Aucune étiquette existante.</p>
+  {% endif %}
 {% endblock content %}

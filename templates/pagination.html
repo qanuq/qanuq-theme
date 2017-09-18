@@ -1,11 +1,17 @@
 {% if DEFAULT_PAGINATION %}
-<div id="paginator">
+  <div id="paginator">
     {% if articles_page.has_previous() %}
-	<a href="{{ SITEURL }}/{{ articles_previous_page.url }}" rel="prev"><i class="fa fa-arrow-left" aria-hidden="true" title="Précédent"></i><span class="sr-only">Précédent</span></a>
+      <a href="{{ SITEURL }}/{{ articles_previous_page.url }}" rel="prev">
+        <i class="fa fa-arrow-left" aria-hidden="true" title="Précédent"></i>
+        <span class="sr-only">Précédent</span>
+      </a>
     {% endif %}
-	<span class="sr-only">Page</span> {{ articles_page.number }} / {{ articles_paginator.num_pages }}
+    <span class="sr-only">Page</span> {{ articles_page.number }} / {{ articles_paginator.num_pages }}
     {% if articles_page.has_next() %}
-	<a href="{{ SITEURL }}/{{ articles_next_page.url }}" rel="next"><span class="sr-only">Suivant</span><i class="fa fa-arrow-right" aria-hidden="true" title="Suivant"></i></a>
+      <a href="{{ SITEURL }}/{{ articles_next_page.url }}" rel="next">
+        <span class="sr-only">Suivant</span>i
+        <i class="fa fa-arrow-right" aria-hidden="true" title="Suivant"></i>
+      </a>
     {% endif %}
-</div>
+  </div>
 {% endif %}

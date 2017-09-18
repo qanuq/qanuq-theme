@@ -5,8 +5,9 @@
 {% block canonical_url %}{{ SITEURL }}/{{ tag.url }}{% endblock canonical_url %}
 
 {% block content_title %}
-<h2 class="title">Publications pour l'étiquette #{{ tag }}</h2>
-{% if SITEURL and TAG_FEED_ATOM %}
-<a href="{{ SITEURL }}/{{ TAG_FEED_ATOM|format(tag.slug) }}" class="atom">Flux Atom pour cette étiquette <i class="fa fa-rss fa-lg" aria-hidden="true"></i></a>
-{% endif %}
+  <h2 class="title">Publications pour l'étiquette #{{ tag }}</h2>
+  {% if SITEURL and TAG_FEED_ATOM %}
+    <a href="{{ SITEURL }}/{{ TAG_FEED_ATOM|format(tag.slug) }}" class="atom">Flux Atom pour cette étiquette <i
+       class="fa fa-rss fa-lg" aria-hidden="true"></i></a>
+  {% endif %}
 {% endblock content_title %}

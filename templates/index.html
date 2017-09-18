@@ -1,21 +1,22 @@
 {% extends "base.html" %}
 {% block body_class %}home{% endblock body_class %}
 {% block content %}
-{% block content_title %}
-<h2 class="title">Dernières publications</h2>
-{% endblock content_title %}
-	{% for article in articles_page.object_list %}
-	<div class="pure-g">
-		<div class="pure-u-1 pure-u-md-1-4 col-date">
-			<time datetime="{{ article.date.isoformat() }}">{{ article.locale_date }}</time>
-		</div>
-		<div class="pure-u-1 pure-u-md-3-4 col-title">
-			<a href="{{ SITEURL }}/{{ article.url }}" rel="bookmark" title="Permalien vers {{ article.title|striptags|e }}">{{ article.title|striptags|e }}</a>
-		</div>
-	</div>
-	{% endfor %}
+  {% block content_title %}
+    <h2 class="title">Dernières publications</h2>
+  {% endblock content_title %}
+  {% for article in articles_page.object_list %}
+    <div class="pure-g">
+      <div class="pure-u-1 pure-u-md-1-4 col-date">
+        <time datetime="{{ article.date.isoformat() }}">{{ article.locale_date }}</time>
+      </div>
+      <div class="pure-u-1 pure-u-md-3-4 col-title">
+        <a href="{{ SITEURL }}/{{ article.url }}" rel="bookmark"
+           title="Permalien vers {{ article.title|striptags|e }}">{{ article.title|striptags|e }}</a>
+      </div>
+    </div>
+  {% endfor %}
 
-{% if articles_page.has_other_pages() %}
+  {% if articles_page.has_other_pages() %}
     {% include 'pagination.html' %}
-{% endif %}
+  {% endif %}
 {% endblock content %}

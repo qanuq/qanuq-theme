@@ -2,11 +2,11 @@
 {% block title %}{{ article.title|striptags|e }} - {{ super() }}{% endblock title %}
 {% block body_class %}article{% endblock body_class %}
 {% block description -%}
-{%- if article.summary -%}
-{{ article.summary|striptags|truncate(160)|e }}
-{%- else-%}
-{{ article.content|striptags|truncate(160)|e }}
-{%- endif -%}
+  {%- if article.summary -%}
+    {{ article.summary|striptags|truncate(160)|e }}
+  {%- else -%}
+    {{ article.content|striptags|truncate(160)|e }}
+  {%- endif -%}
 {%- endblock description %}
 {% block canonical_url %}{{ SITEURL }}/{{ article.url }}{% endblock canonical_url %}
 {% block og_type %}article{% endblock og_type %}
@@ -14,98 +14,100 @@
 {% block opengraph_image %}
   {% if article.headerimage %}
     <meta property="og:image" content="{{ SITEURL }}/images/{{ article.headerimage }}" />
-	<meta name="twitter:image" content="{{ SITEURL }}/images/{{ article.headerimage }}" />
+    <meta name="twitter:image" content="{{ SITEURL }}/images/{{ article.headerimage }}" />
   {% elif QANUQ_HEADER_IMAGE %}
     <meta property="og:image" content="{{ SITEURL }}/images/{{ QANUQ_HEADER_IMAGE }}" />
-	<meta name="twitter:image" content="{{ SITEURL }}/images/{{ QANUQ_HEADER_IMAGE }}" />
+    <meta name="twitter:image" content="{{ SITEURL }}/images/{{ QANUQ_HEADER_IMAGE }}" />
   {% endif %}
 {% endblock opengraph_image %}
 {% block opengraph %}
-  {{ super() }}
+    {{ super() }}
 
-  {% if article.date %}
-    <meta property="article:published_time" content="{{ article.date.isoformat() }}" />
-  {% endif %}
+    {% if article.date %}
+        <meta property="article:published_time" content="{{ article.date.isoformat() }}"/>
+    {% endif %}
 
-  {% if article.modified %}
-    <meta property="article:modified_time" content="{{ article.modified.isoformat() }}" />
-  {% endif %}
+    {% if article.modified %}
+        <meta property="article:modified_time" content="{{ article.modified.isoformat() }}"/>
+    {% endif %}
 
-  {% for author in article.authors %}
-    <meta property="og:article:author" content="{{ author }}" />
-  {% endfor %}
+    {% for author in article.authors %}
+        <meta property="og:article:author" content="{{ author }}"/>
+    {% endfor %}
 
-  {% if article.category %}
-    <meta property="article:section" content="{{ article.category }}" />
-  {% endif %}
+    {% if article.category %}
+        <meta property="article:section" content="{{ article.category }}"/>
+    {% endif %}
 
-  {% for tag in article.tags %}
-    <meta property="article:tag" content="{{ tag }}" />
-  {% endfor %}
+    {% for tag in article.tags %}
+        <meta property="article:tag" content="{{ tag }}"/>
+    {% endfor %}
 {% endblock opengraph %}
 
 {% block head %}
-  {{ super() }}
+    {{ super() }}
 
-  {% for tag in article.tags %}
-    <meta name="tags" content="{{ tag }}" />
-  {% endfor %}
+    {% for tag in article.tags %}
+        <meta name="tags" content="{{ tag }}"/>
+    {% endfor %}
 
 {% endblock head %}
 
 {% block title_header %}
-	<a href="{{ SITEURL }}/{{ article.url }}" rel="bookmark" title="Permalien vers {{ article.title|striptags|e }}">{{ article.title|striptags|e }}</a>
+  <a href="{{ SITEURL }}/{{ article.url }}" rel="bookmark"
+     title="Permalien vers {{ article.title|striptags|e }}">{{ article.title|striptags|e }}</a>
 {% endblock title_header %}
 
 {% block subtitle_header %}
-	Écrit
-    {% if article.authors %}
-      par {% for author in article.authors %}
-          <a class="url fn" href="{{ SITEURL }}/{{ author.url }}">{{ author }}</a>,
-        {% endfor %}
-    {% endif %}
-	le
-    <time class="published" datetime="{{ article.date.isoformat() }}">{{ article.locale_date }}</time>
-	{% if article.modified %}
-	et modifié le
+  Écrit
+  {% if article.authors %}
+    par
+    {% for author in article.authors %}
+      <a class="url fn" href="{{ SITEURL }}/{{ author.url }}">{{ author }}</a>,
+    {% endfor %}
+  {% endif %}
+  le
+  <time class="published" datetime="{{ article.date.isoformat() }}">{{ article.locale_date }}</time>
+  {% if article.modified %}
+    et modifié le
     <time class="modified" datetime="{{ article.modified.isoformat() }}">{{ article.locale_modified }}</time>
-	{% endif %}
-	{% if article.category %}
-	    dans la catégorie
-		<a href="{{ SITEURL }}/{{ article.category.url }}">{{ article.category }}</a>
-	{% endif %}
+  {% endif %}
+  {% if article.category %}
+    dans la catégorie
+    <a href="{{ SITEURL }}/{{ article.category.url }}">{{ article.category }}</a>
+  {% endif %}
 {% endblock subtitle_header %}
 
 {% block extra_header %}
-	{% if article.tags %}
-	<div id="tags">
-		<i class="fa fa-tags" aria-hidden="true"></i>
-		{% for tag in article.tags %}
-			<a href="{{ SITEURL }}/{{ tag.url }}">{{ tag }}</a>
-			{{ "," if not loop.last }}
-		{% endfor %}
-	</div>
-	{% endif %}
+  {% if article.tags %}
+    <div id="tags">
+      <i class="fa fa-tags" aria-hidden="true"></i>
+      {% for tag in article.tags %}
+        <a href="{{ SITEURL }}/{{ tag.url }}">{{ tag }}</a>
+        {{ "," if not loop.last }}
+      {% endfor %}
+    </div>
+  {% endif %}
 {% endblock extra_header %}
 
 {% block header_class -%}
-{%- if article.headerimage or QANUQ_HEADER_IMAGE -%}
-image
-{%- endif -%}
+  {%- if article.headerimage or QANUQ_HEADER_IMAGE -%}
+    image
+  {%- endif -%}
 {%- endblock header_class %}"
 
 {% block header_style -%}
-{%- if article.headerimage -%}
-background-image:url('{{ SITEURL }}/images/{{ article.headerimage }}');
-{%- elif QANUQ_HEADER_IMAGE %}
-background-image:url('{{ SITEURL }}/images/{{ QANUQ_HEADER_IMAGE }}');
-{%- endif %}
+  {%- if article.headerimage -%}
+    background-image:url('{{ SITEURL }}/images/{{ article.headerimage }}');
+  {%- elif QANUQ_HEADER_IMAGE %}
+    background-image:url('{{ SITEURL }}/images/{{ QANUQ_HEADER_IMAGE }}');
+  {%- endif %}
 {%- endblock header_style %}
 
 {% block content %}
-<article>
+  <article>
     {{ article.content }}
-</article>
+  </article>
 
-	{% include "disqus_script.html" %}
+  {% include "disqus_script.html" %}
 {% endblock content %}

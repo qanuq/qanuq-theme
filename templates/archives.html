@@ -5,15 +5,16 @@
 {% block canonical_url %}{{ SITEURL }}/{{ output_file }}{% endblock canonical_url %}
 
 {% block content %}
-<h2 class="title">Archives</h2>
-	{% for article in dates %}
-	<div class="pure-g">
-		<div class="pure-u-1 pure-u-md-1-4 col-date">
-			<time datetime="{{ article.date.isoformat() }}">{{ article.locale_date }}</time>
-		</div>
-		<div class="pure-u-1 pure-u-md-3-4 col-title">
-			<a href="{{ SITEURL }}/{{ article.url }}" rel="bookmark" title="Permalien vers {{ article.title|striptags|e }}">{{ article.title|striptags|e }}</a>
-		</div>
-	</div>
-	{% endfor %}
+  <h2 class="title">Archives</h2>
+  {% for article in dates %}
+    <div class="pure-g">
+      <div class="pure-u-1 pure-u-md-1-4 col-date">
+        <time datetime="{{ article.date.isoformat() }}">{{ article.locale_date }}</time>
+      </div>
+      <div class="pure-u-1 pure-u-md-3-4 col-title">
+        <a href="{{ SITEURL }}/{{ article.url }}" rel="bookmark"
+           title="Permalien vers {{ article.title|striptags|e }}">{{ article.title|striptags|e }}</a>
+      </div>
+    </div>
+  {% endfor %}
 {% endblock content %}

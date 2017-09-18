@@ -5,15 +5,16 @@
 {% block canonical_url %}{{ SITEURL }}/{{ output_file }}{% endblock canonical_url %}
 
 {% block content %}
-<h2 class="title">Auteurs</h2>
+  <h2 class="title">Auteurs</h2>
 
-{% if authors %}
-<ul>
-	{% for author, articles in authors|sort %}
-	<li><a href="{{ SITEURL }}/{{ author.url }}">{{ author }}</a> <span class="count">{{ articles|count }}</span></li>
-	{% endfor %}
-</ul>
-{% else %}
-	<p>Aucun auteur existant.</p>
-{% endif %}
+  {% if authors %}
+    <ul>
+      {% for author, articles in authors|sort %}
+        <li><a href="{{ SITEURL }}/{{ author.url }}">{{ author }}</a>
+          <span class="count">{{ articles|count }}</span></li>
+      {% endfor %}
+    </ul>
+  {% else %}
+    <p>Aucun auteur existant.</p>
+  {% endif %}
 {% endblock content %}

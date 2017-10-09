@@ -8,6 +8,12 @@
     {{ article.content|striptags|truncate(160)|e }}
   {%- endif -%}
 {%- endblock description %}
+{% block keywords -%}
+    {%- for tag in article.tags -%}
+        {{- tag -}}
+        {{- "," if not loop.last -}}
+    {%- endfor -%}
+{%- endblock keywords %}
 {% block canonical_url %}{{ SITEURL }}/{{ article.url }}{% endblock canonical_url %}
 {% block og_type %}article{% endblock og_type %}
 

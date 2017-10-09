@@ -5,9 +5,8 @@
       <title>{% block title %}{{ SITENAME }}{% endblock title %}</title>
       <meta charset="utf-8" />
       <meta name="viewport" content="width=device-width, initial-scale=1" />
-      <meta name="description" content="{% block description %}{% endblock description %}" />
-      {# TODO keywords #}
-      <meta name="keywords" content="{% block keywords %}{% endblock keywords %}" />
+	  <meta name="description" content="{% block description %}{{ SITENAME }}, {{ SITESUBTITLE }}{% endblock description %}" />
+	  <meta name="keywords" content="{% block keywords %}{{ SITENAME }}{% endblock keywords %}" />
       <link rel="canonical" href="{% block canonical_url %}{{ SITEURL }}/{% endblock canonical_url %}" />
       <meta property="og:locale" content="fr_FR" />
       <meta property="og:title" content="{{ self.title() }}" />

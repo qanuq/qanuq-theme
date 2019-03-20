@@ -62,15 +62,15 @@
                 title="Flux Atom du site, {{ SITENAME }}" />
         {% endif %}
         {% if CATEGORY_FEED_ATOM and category %}
-          <link href="{{ FEED_DOMAIN }}/{{ CATEGORY_FEED_ATOM|format(category.slug) }}"
+          <link href="{{ FEED_DOMAIN }}/{{ CATEGORY_FEED_ATOM.format(slug=category.slug) }}"
                 type="application/atom+xml" rel="alternate" title="Flux Atom des catégories, {{ SITENAME }}" />
         {% endif %}
         {% if TAG_FEED_ATOM and tag %}
-          <link href="{{ FEED_DOMAIN }}/{{ TAG_FEED_ATOM|format(tag.slug) }}" type="application/atom+xml"
+          <link href="{{ FEED_DOMAIN }}/{{ TAG_FEED_ATOM.format(slug=tag.slug) }}" type="application/atom+xml"
                 rel="alternate" title="Flux Atom des étiquettes, {{ SITENAME }}" />
         {% endif %}
         {% if AUTHOR_FEED_ATOM and author %}
-          <link href="{{ FEED_DOMAIN }}/{{ AUTHOR_FEED_ATOM|format(author.slug) }}" type="application/atom+xml"
+          <link href="{{ FEED_DOMAIN }}/{{ AUTHOR_FEED_ATOM.format(slug=author.slug) }}" type="application/atom+xml"
                 rel="alternate" title="Flux Atom des Auteurs, {{ SITENAME }}" />
         {% endif %}
       {% endif %}

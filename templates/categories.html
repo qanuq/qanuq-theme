@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+{% block title %}Catégories - {{ super() }}{% endblock title %}
+{% block body_class %}categories{% endblock body_class %}
+{% block description %}Liste de catégories pour les publications de {{ SITENAME }} {{ SITESUBTITLE }}{% endblock description %}
+{% block canonical_url %}{{ SITEURL }}/{{ output_file }}{% endblock canonical_url %}
+
+{% block content %}
+  <h2 class="title">Catégories</h2>
+  {% if categories %}
+    <ul>
+      {% for category, articles in categories %}
+        <li><a href="{{ SITEURL }}/{{ category.url }}">{{ category }}</a>
+          <span class="count">{{ articles|count }}</span></li>
+      {% endfor %}
+    </ul>
+  {% else %}
+    <p>Aucune catégorie existante.</p>
+  {% endif %}
+{% endblock content %}

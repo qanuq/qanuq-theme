@@ -1,0 +1,21 @@
+{% if DISQUS_SITENAME and SITEURL %}
+
+  <div id="disqus_thread"></div>
+  <script>
+    var disqus_shortname = '{{ DISQUS_SITENAME }}';
+    var disqus_config = function () {
+      this.page.url = '{{ SITEURL }}/{{ article.url }}';
+      this.page.identifier = '/{{ article.url }}';
+    };
+    (function () {
+      var d = document, s = d.createElement('script');
+      s.src = 'https://' + disqus_shortname + '.disqus.com/embed.js';
+      s.setAttribute('data-timestamp', +new Date());
+      (d.head || d.body).appendChild(s);
+    })();
+  </script>
+  <noscript><i class="fa fa-exclamation-triangle fa-lg" aria-hidden="true"></i> Pour voir les commentaires, Javascript
+    doit être activé. <i class="fa fa-exclamation-triangle fa-lg" aria-hidden="true"></i>
+  </noscript>
+
+{% endif %}

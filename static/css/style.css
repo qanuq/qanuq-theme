@@ -212,7 +212,6 @@ code {
 /******************** content begin ********************/
 
 .toc {
-    font-weight:300;
     font-size:0.9em;
     line-height:1.5em;
 }
@@ -236,8 +235,8 @@ ul {
     list-style-position:outside;
 }
 
-.toc,
-a {
+.toc, a {
+    font-weight:500;
     color:#a00;
     text-decoration:none;
 }

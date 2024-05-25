@@ -84,11 +84,8 @@ header > div {
 #footer a.nav-sitemap::before,
 #footer a.nav-etiquettes::before,
 #footer a.nav-categories::before,
-#footer a[href*="500px.com/"]::before,
-#footer a[href*="facebook.com/"]::before,
 #footer a[href*="github.com/"]::before,
-#footer a[href*="linkedin.com/"]::before,
-#footer a[href*="paypal.me/"]::before {
+#footer a[href*="linkedin.com/"]::before {
     font-family:"FontAwesome";
     margin-right:0.25em;
     display:inline-block;
@@ -120,30 +117,12 @@ header > div {
     content:"\f040";
 }
 
-#footer a[href*="500px.com/"]::before {
-    content:"\f26e";
-}
-
-#footer a[href*="facebook.com/"]::before {
-    content:"\f230";
-}
-
 #footer a[href*="github.com/"]::before {
     content:"\f09b";
 }
 
 #footer a[href*="linkedin.com/"]::before {
     content:"\f0e1";
-}
-
-#footer a[href*="paypal.me/"] {
-    color:#f96;
-    font-weight:600;
-}
-
-#footer a[href*="paypal.me/"]::before {
-    content:"\f1ed";
-    color:#f96;
 }
 /******************** footer end ********************/
 

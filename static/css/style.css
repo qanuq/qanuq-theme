@@ -8,8 +8,8 @@ p {
 }
 
 body {
-    background-color: #f5f5f5;
-    -webkit-font-smoothing: antialiased;
+    background-color:#f5f5f5;
+    -webkit-font-smoothing:antialiased;
 }
 
 header {
@@ -30,7 +30,7 @@ header > div {
 }
 
 .l-box {
-    padding: 1em;
+    padding:1em;
 }
 
 #content > div > .l-box {

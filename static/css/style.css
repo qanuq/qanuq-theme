@@ -88,8 +88,7 @@ header > div {
 #footer a[href*="facebook.com/"]::before,
 #footer a[href*="github.com/"]::before,
 #footer a[href*="linkedin.com/"]::before,
-#footer a[href*="paypal.me/"]::before,
-#footer a[href*="twitter.com/"]::before {
+#footer a[href*="paypal.me/"]::before {
     font-family:"FontAwesome";
     margin-right:0.25em;
     display:inline-block;
@@ -145,10 +144,6 @@ header > div {
 #footer a[href*="paypal.me/"]::before {
     content:"\f1ed";
     color:#f96;
-}
-
-#footer a[href*="twitter.com/"]::before {
-    content:"\f099";
 }
 /******************** footer end ********************/
 
@@ -243,7 +238,7 @@ ul {
 
 .toc,
 a {
-    color:#f33;
+    color:#a00;
     text-decoration:none;
 }
 
@@ -445,7 +440,7 @@ h6 a:focus::after, h6 a:hover::after {
 /******************** titles end ********************/
 
 noscript {
-    color:#f33;
+    color:#a00;
     text-align:center;
     display:block;
     margin:1em auto;

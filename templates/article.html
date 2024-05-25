@@ -15,40 +15,6 @@
     {%- endfor -%}
 {%- endblock keywords %}
 {% block canonical_url %}{{ SITEURL }}/{{ article.url }}{% endblock canonical_url %}
-{% block og_type %}article{% endblock og_type %}
-
-{% block opengraph_image %}
-  {% if article.headerimage %}
-    <meta property="og:image" content="{{ SITEURL }}/images/{{ article.headerimage }}" />
-    <meta name="twitter:image" content="{{ SITEURL }}/images/{{ article.headerimage }}" />
-  {% elif QANUQ_HEADER_IMAGE %}
-    <meta property="og:image" content="{{ SITEURL }}/images/{{ QANUQ_HEADER_IMAGE }}" />
-    <meta name="twitter:image" content="{{ SITEURL }}/images/{{ QANUQ_HEADER_IMAGE }}" />
-  {% endif %}
-{% endblock opengraph_image %}
-{% block opengraph %}
-    {{ super() }}
-
-    {% if article.date %}
-        <meta property="article:published_time" content="{{ article.date.isoformat() }}"/>
-    {% endif %}
-
-    {% if article.modified %}
-        <meta property="article:modified_time" content="{{ article.modified.isoformat() }}"/>
-    {% endif %}
-
-    {% for author in article.authors %}
-        <meta property="og:article:author" content="{{ author }}"/>
-    {% endfor %}
-
-    {% if article.category %}
-        <meta property="article:section" content="{{ article.category }}"/>
-    {% endif %}
-
-    {% for tag in article.tags %}
-        <meta property="article:tag" content="{{ tag }}"/>
-    {% endfor %}
-{% endblock opengraph %}
 
 {% block head %}
     {{ super() }}
@@ -114,6 +80,4 @@
   <article>
     {{ article.content }}
   </article>
-
-  {% include "disqus_script.html" %}
 {% endblock content %}

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="fr" xmlns:og="http://ogp.me/ns#">
+<html lang="fr">
   <head>
     {% block head %}
       <title>{% block title %}{{ SITENAME }}{% endblock title %}</title>
@@ -8,24 +8,6 @@
 	  <meta name="description" content="{% block description %}{{ SITENAME }}, {{ SITESUBTITLE }}{% endblock description %}" />
 	  <meta name="keywords" content="{% block keywords %}{{ SITENAME }}{% endblock keywords %}" />
       <link rel="canonical" href="{% block canonical_url %}{{ SITEURL }}/{% endblock canonical_url %}" />
-      <meta property="og:locale" content="fr_FR" />
-      <meta property="og:title" content="{{ self.title() }}" />
-      <meta property="og:site_name" content="{{ SITENAME }}" />
-      <meta property="og:description" content="{{ self.description() }}" />
-      <meta property="og:url" content="{{ self.canonical_url() }}" />
-      {% block opengraph %}
-        <meta property="og:type" content="{% block og_type %}website{% endblock og_type %}" />
-      {% endblock opengraph %}
-      {% block opengraph_image %}
-        {% if QANUQ_HEADER_IMAGE %}
-          <meta property="og:image" content="{{ SITEURL }}/images/{{ QANUQ_HEADER_IMAGE }}" />
-          <meta name="twitter:image" content="{{ SITEURL }}/images/{{ QANUQ_HEADER_IMAGE }}" />
-        {% endif %}
-      {% endblock opengraph_image %}
-
-      <meta name="twitter:card" content="summary_large_image" />
-      <meta name="twitter:title" content="{{ self.title() }}" />
-      <meta name="twitter:description" content="{{ self.description() }}" />
 
       <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600" rel="stylesheet" />
       {# TODO https://stackoverflow.com/questions/25952907/favicon-ico-vs-link-rel-shortcut-icon #}
@@ -56,9 +38,6 @@
                 rel="alternate" title="Flux Atom des Auteurs, {{ SITENAME }}" />
         {% endif %}
       {% endif %}
-
-      {# include 'analytics.html' #}
-      {# include 'adsense.html' #}
 
     {% endblock head %}
   </head>

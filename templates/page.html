@@ -9,33 +9,6 @@
   {%- endif -%}
 {%- endblock description %}
 {% block canonical_url %}{{ SITEURL }}/{{ page.url }}{% endblock canonical_url %}
-{% block og_type %}article{% endblock og_type %}
-
-{% block opengraph_image %}
-  {% if page.headerimage %}
-    <meta property="og:image" content="{{ SITEURL }}/images/{{ page.headerimage }}" />
-    <meta name="twitter:image" content="{{ SITEURL }}/images/{{ page.headerimage }}" />
-  {% elif QANUQ_HEADER_IMAGE %}
-    <meta property="og:image" content="{{ SITEURL }}/images/{{ QANUQ_HEADER_IMAGE }}" />
-    <meta name="twitter:image" content="{{ SITEURL }}/images/{{ QANUQ_HEADER_IMAGE }}" />
-  {% endif %}
-{% endblock opengraph_image %}
-{% block opengraph %}
-  {{ super() }}
-
-  {% if page.date %}
-    <meta property="article:published_time" content="{{ page.date.isoformat() }}"/>
-  {% endif %}
-
-  {% if page.modified %}
-    <meta property="article:modified_time" content="{{ page.modified.isoformat() }}"/>
-  {% endif %}
-
-  {% for author in page.authors %}
-    <meta property="og:article:author" content="{{ author }}"/>
-  {% endfor %}
-
-{% endblock opengraph %}
 
 {% block title_header %}
   <a href="{{ SITEURL }}/{{ page.url }}" rel="bookmark"

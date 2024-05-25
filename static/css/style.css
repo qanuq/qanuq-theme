@@ -238,7 +238,7 @@ ul {
 
 .toc,
 a {
-    color:#f33;
+    color:#a00;
     text-decoration:none;
 }
 
@@ -440,7 +440,7 @@ h6 a:focus::after, h6 a:hover::after {
 /******************** titles end ********************/
 
 noscript {
-    color:#f33;
+    color:#a00;
     text-align:center;
     display:block;
     margin:1em auto;

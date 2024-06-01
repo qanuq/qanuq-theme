@@ -31,20 +31,6 @@
   {% endif %}
 {% endblock subtitle_header %}
 
-{% block header_class -%}
-  {%- if page.headerimage or QANUQ_HEADER_IMAGE -%}
-    image
-  {%- endif -%}
-{%- endblock header_class %}"
-
-{% block header_style -%}
-  {%- if page.headerimage -%}
-    background-image:url('{{ SITEURL }}/images/{{ page.headerimage }}');
-  {%- elif QANUQ_HEADER_IMAGE %}
-    background-image:url('{{ SITEURL }}/images/{{ QANUQ_HEADER_IMAGE }}');
-  {%- endif %}
-{%- endblock header_style %}
-
 {% block content %}
   <article>
     {{ page.content }}

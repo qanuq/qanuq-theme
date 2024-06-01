@@ -15,22 +15,6 @@
      title="Permalien vers {{ page.title|striptags|e }}">{{ page.title|striptags|e }}</a>
 {% endblock title_header %}
 
-{% block subtitle_header %}
-  Écrit
-  {% if page.authors %}
-    par
-    {% for author in page.authors %}
-      <a class="url fn" href="{{ SITEURL }}/{{ author.url }}">{{ author }}</a>,
-    {% endfor %}
-  {% endif %}
-  le
-  <time class="published" datetime="{{ page.date.isoformat() }}">{{ page.locale_date }}</time>
-  {% if page.modified %}
-    et modifié le
-    <time class="modified" datetime="{{ page.modified.isoformat() }}">{{ page.locale_modified }}</time>
-  {% endif %}
-{% endblock subtitle_header %}
-
 {% block content %}
   <article>
     {{ page.content }}

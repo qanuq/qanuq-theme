@@ -1,7 +1,7 @@
 {% extends "index.html" %}
-{% block title %}Catégorie {{ category }} - {{ super() }}{% endblock title %}
+{% block title %}Catégorie {{ category }} - {{ super() }}{% endblock title %}
 {% block body_class %}category{% endblock body_class %}
-{% block description %}Liste de publications concernant la catégorie {{ category }} de {{ SITENAME }} {{ SITESUBTITLE }}{% endblock description %}
+{% block description %}Liste de publications concernant la catégorie {{ category }} de {{ SITENAME }}{% endblock description %}
 {% block canonical_url %}{{ SITEURL }}/{{ category.url }}{% endblock canonical_url %}
 
 {% block content_title %}

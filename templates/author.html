@@ -1,8 +1,7 @@
 {% extends "index.html" %}
 {% block title %}Articles par {{ author }} - {{ super() }}{% endblock title %}
 {% block body_class %}author{% endblock body_class %}
-{% block description %}Liste de publications concernant l'auteur {{ author }} de {{ SITENAME }}
-    {{ SITESUBTITLE }}{% endblock description %}
+{% block description %}Liste de publications concernant l'auteur {{ author }} de {{ SITENAME }}{% endblock description %}
 {% block canonical_url %}{{ SITEURL }}/{{ author.url }}{% endblock canonical_url %}
 
 {% block content_title %}

@@ -14,7 +14,6 @@ body {
 
 header {
     padding:0;
-    min-height:360px;
     background:radial-gradient(ellipse at top, #d00000, transparent),radial-gradient(ellipse at bottom, #f60, transparent);
     background-size:300% 200%;
     background-position:50% 50%;
@@ -38,6 +37,7 @@ header > div {
 #content > div > .l-box {
     border-left:1px solid rgba(0,0,0,.1);
     border-right:1px solid rgba(0,0,0,.1);
+    padding:2em;
 }
 
 /******************** footer start ********************/
@@ -139,15 +139,20 @@ header > div {
 /******************** footer end ********************/
 
 .col-date {
-    font-size:0.8em;
-    font-weight:300;
+    font-size:1em;
+    font-weight:100;
     overflow:hidden;
     text-overflow:ellipsis;
     white-space:nowrap;
 }
 
 .col-title {
-    font-size:0.9em;
+    font-size:1em;
+}
+
+time {
+    font-weight:100;
+    color:#111;
 }
 
 #paginator {
@@ -184,6 +189,7 @@ header > div {
 
 pre {
     padding:2em;
+    overflow:scroll;
 }
 
 pre, code {
@@ -191,19 +197,14 @@ pre, code {
     font-family:'Fira Code', monospace;
     background-color:#333;
     color:#fff;
-    font-size:.8em;
-    font-weight:300;
-}
-
-code {
-    padding:0.2em 0.3em;
-    border-radius:0.25em;
+    font-size:1em;
+    font-weight:400;
 }
 
 /******************** content begin ********************/
 
 .toc {
-    font-size:0.9em;
+    font-size:1em;
     line-height:1.5em;
 }
 
@@ -227,7 +228,6 @@ ul {
 }
 
 .toc, a {
-    font-weight:500;
     color:#a00;
     text-decoration:none;
 }
@@ -254,7 +254,7 @@ a:hover {
 
 header {
     color:#fff;
-    text-shadow:1px 1px 1px rgba(0, 0, 0, 1);
+    text-shadow:2px 2px 5px rgba(0, 0, 0, 1);
 }
 
 header a {
@@ -268,13 +268,13 @@ header a:focus {
     text-decoration:underline;
 }
 
-#banner .subtitle {
-    text-align:center;
-    font-size:0.9em;
+.subtitle {
+    text-align:left;
+    font-size:1.1em;
     font-weight:300;
 }
 
-#banner .subtitle a {
+.subtitle a {
     font-weight:600;
 }
 
@@ -291,8 +291,8 @@ header a:focus {
     display:inline-block;
     text-transform:uppercase;
     font-weight:600;
-    font-size:.8em;
-    margin-left:1em;
+    font-size:1.1em;
+    margin-left:0.5em;
 }
 
 #menu li a {
@@ -305,11 +305,33 @@ header a:focus {
     text-decoration:none;
 }
 
-#tags {
+#metadata {
+    margin-top:2em;
+    margin-left:2em;
+    margin-right:2em;
+    margin-bottom:0;
+}
+
+.metadata_line {
+    margin:1em 0;
+}
+
+span.date,
+span.tags,
+span.authors,
+span.category {
+    display:inline-block;
+    font-size:1em;
+}
+
+span.tags, span.date {
+    float:right;
     text-align:right;
-    font-size:0.8em;
-    font-weight:600;
-    margin-top:8em;
+}
+
+span.authors,
+span.category {
+    clear:both;
 }
 
 /******************** header end ********************/
@@ -327,9 +349,9 @@ header a:focus {
 
 #banner h1 {
     text-align:center;
-    font-size:1.75em;
+    font-size:3em;
     font-weight:600;
-    margin-top:2em;
+    margin-top:0.5em;
     margin-bottom:0.5em;
 }
 
@@ -337,8 +359,6 @@ header a:focus {
     display:block;
     content:" ";
     margin-top:.125em;
-    width:10%;
-    border-bottom:.1em solid #fff;
     margin-left:auto;
     margin-right:auto;
     margin-bottom:.125em;

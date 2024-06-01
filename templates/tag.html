@@ -1,7 +1,7 @@
 {% extends "index.html" %}
-{% block title %}#{{ tag }} - {{ super() }}{% endblock title %}
+{% block title %}#{{ tag }} - {{ super() }}{% endblock title %}
 {% block body_class %}tag{% endblock body_class %}
-{% block description %}Liste de publications concernant l'étiquette #{{ tag }} de {{ SITENAME }} {{ SITESUBTITLE }}{% endblock description %}
+{% block description %}Liste de publications concernant l'étiquette #{{ tag }} de {{ SITENAME }}{% endblock description %}
 {% block canonical_url %}{{ SITEURL }}/{{ tag.url }}{% endblock canonical_url %}
 
 {% block content_title %}

@@ -156,6 +156,17 @@ time {
     color:#111;
 }
 
+.archives #content time,
+.category #content time,
+.tag #content time,
+.author #content time,
+.home #content time,
+.period_archives #content time {
+    display:inline-block;
+    margin-left:1em;
+    font-size:0.75em;
+}
+
 #paginator {
     margin:1em auto 0 auto;
     text-align:center;

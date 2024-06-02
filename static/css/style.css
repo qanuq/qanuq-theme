@@ -185,12 +185,12 @@ time {
 }
 
 ::selection {
-    background:#f83; /* Safari */
+    background:#d00000; /* Safari */
     color:#FFF;
 }
 
 ::-moz-selection {
-    background:#f83; /* Firefox */
+    background:#d00000; /* Firefox */
     color:#FFF;
 }
 

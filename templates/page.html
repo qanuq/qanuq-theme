@@ -15,36 +15,6 @@
      title="Permalien vers {{ page.title|striptags|e }}">{{ page.title|striptags|e }}</a>
 {% endblock title_header %}
 
-{% block subtitle_header %}
-  Écrit
-  {% if page.authors %}
-    par
-    {% for author in page.authors %}
-      <a class="url fn" href="{{ SITEURL }}/{{ author.url }}">{{ author }}</a>,
-    {% endfor %}
-  {% endif %}
-  le
-  <time class="published" datetime="{{ page.date.isoformat() }}">{{ page.locale_date }}</time>
-  {% if page.modified %}
-    et modifié le
-    <time class="modified" datetime="{{ page.modified.isoformat() }}">{{ page.locale_modified }}</time>
-  {% endif %}
-{% endblock subtitle_header %}
-
-{% block header_class -%}
-  {%- if page.headerimage or QANUQ_HEADER_IMAGE -%}
-    image
-  {%- endif -%}
-{%- endblock header_class %}"
-
-{% block header_style -%}
-  {%- if page.headerimage -%}
-    background-image:url('{{ SITEURL }}/images/{{ page.headerimage }}');
-  {%- elif QANUQ_HEADER_IMAGE %}
-    background-image:url('{{ SITEURL }}/images/{{ QANUQ_HEADER_IMAGE }}');
-  {%- endif %}
-{%- endblock header_style %}
-
 {% block content %}
   <article>
     {{ page.content }}

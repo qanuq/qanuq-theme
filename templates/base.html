@@ -5,7 +5,8 @@
       <title>{% block title %}{{ SITENAME }}{% endblock title %}</title>
       <meta charset="utf-8" />
       <meta name="viewport" content="width=device-width, initial-scale=1" />
-	  <meta name="description" content="{% block description %}{{ SITENAME }}, {{ SITESUBTITLE }}{% endblock description %}" />
+      <meta name="theme-color" content="#d00000" />
+	  <meta name="description" content="{% block description %}{{ SITENAME }}{% endblock description %}" />
 	  <meta name="keywords" content="{% block keywords %}{{ SITENAME }}{% endblock keywords %}" />
       <link rel="canonical" href="{% block canonical_url %}{{ SITEURL }}/{% endblock canonical_url %}" />
 
@@ -16,7 +17,6 @@
       <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/firacode@6.2.0/distr/fira_code.css" integrity="sha384-4aMEnBa9HzMLsDYaLm5wiA2ZoWDqNSB6pNnINMFUt13g9VOuTY5hZC49pzHzRXVs" crossorigin="anonymous" />
       <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/purecss@3.0.0/build/pure-min.css" integrity="sha384-X38yfunGUhNzHpBaEBsWLO+A0HDYOQi8ufWDkZ0k9e0eXz/tH3II7uKZ9msv++Ls" crossorigin="anonymous" />
       <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/purecss@3.0.0/build/grids-responsive-min.css" integrity="sha384-zSu8LMfA4z+XX+S+3seN6uTKIYy1Qcfk0dNE+/0SHT5UgOHCnFeHjR16aowIFpII" crossorigin="anonymous" />
-      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" />
       <link rel="stylesheet" href="{{ SITEURL }}/theme/css/style.css" />
       <link rel="stylesheet" href="{{ SITEURL }}/theme/css/pygment.css" />
 
@@ -44,18 +44,8 @@
 
   <body class="{% block body_class %}{% endblock body_class %}">
 
-    <header class="pure-g {% block header_class -%}
-                            {%- if QANUQ_HEADER_IMAGE -%}
-                              image
-                            {%- endif %}
-                          {%- endblock header_class %}"
-            style="{% block header_style -%}
-                     {%- if QANUQ_HEADER_IMAGE -%}
-                       background-image:url('{{ SITEURL }}/images/{{ QANUQ_HEADER_IMAGE }}');
-                     {%- endif %}
-                   {%- endblock header_style %}">
-
-      <div class="pure-u-1 pure-u-md-20-24 pure-u-lg-16-24">
+    <header class="pure-g">
+      <div class="pure-u-1 pure-u-md-22-24 pure-u-lg-20-24">
         <div class="pure-g">
           <div class="pure-u-1 pure-u-md-1-2 pure-u-lg-1-2">
             <div class="l-box">
@@ -83,8 +73,6 @@
         <div id="banner">
           <div class="l-box">
             <h1>{% block title_header %}<a href="{{ SITEURL }}/">{{ SITENAME }}</a>{% endblock title_header %}</h1>
-            <p class="subtitle">{% block subtitle_header %}{{ SITESUBTITLE }}{% endblock subtitle_header %}</p>
-            {% block extra_header %}{% endblock extra_header %}
           </div>
         </div>
 
@@ -92,7 +80,8 @@
     </header>
 
     <section id="content" class="pure-g">
-      <div class="pure-u-1 pure-u-md-20-24 pure-u-lg-16-24">
+      <div class="pure-u-1 pure-u-md-22-24 pure-u-lg-20-24">
+        {% block metadata %}{% endblock metadata %}
         <div class="l-box">
           {% block content %}{% endblock content %}
         </div>

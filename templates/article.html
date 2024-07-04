@@ -20,7 +20,7 @@
     {{ super() }}
 
     {% for tag in article.tags %}
-        <meta name="tags" content="{{ tag }}"/>
+        <meta name="tags" content="{{ tag }}">
     {% endfor %}
 
 {% endblock head %}

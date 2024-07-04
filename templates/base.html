@@ -3,39 +3,39 @@
   <head>
     {% block head %}
       <title>{% block title %}{{ SITENAME }}{% endblock title %}</title>
-      <meta charset="utf-8" />
-      <meta name="viewport" content="width=device-width, initial-scale=1" />
-      <meta name="theme-color" content="#d00000" />
-	  <meta name="description" content="{% block description %}{{ SITENAME }}{% endblock description %}" />
-	  <meta name="keywords" content="{% block keywords %}{{ SITENAME }}{% endblock keywords %}" />
-      <link rel="canonical" href="{% block canonical_url %}{{ SITEURL }}/{% endblock canonical_url %}" />
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <meta name="theme-color" content="#d00000">
+	  <meta name="description" content="{% block description %}{{ SITENAME }}{% endblock description %}">
+	  <meta name="keywords" content="{% block keywords %}{{ SITENAME }}{% endblock keywords %}">
+      <link rel="canonical" href="{% block canonical_url %}{{ SITEURL }}/{% endblock canonical_url %}">
 
-      <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600" rel="stylesheet" />
+      <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600" rel="stylesheet">
       {# TODO https://stackoverflow.com/questions/25952907/favicon-ico-vs-link-rel-shortcut-icon #}
-      {# <link rel="icon shortcut" href="{{ SITEURL }}/favicon.ico" /> #}
+      {# <link rel="icon shortcut" href="{{ SITEURL }}/favicon.ico"> #}
 
-      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/firacode@6.2.0/distr/fira_code.css" integrity="sha384-4aMEnBa9HzMLsDYaLm5wiA2ZoWDqNSB6pNnINMFUt13g9VOuTY5hZC49pzHzRXVs" crossorigin="anonymous" />
-      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/purecss@3.0.0/build/pure-min.css" integrity="sha384-X38yfunGUhNzHpBaEBsWLO+A0HDYOQi8ufWDkZ0k9e0eXz/tH3II7uKZ9msv++Ls" crossorigin="anonymous" />
-      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/purecss@3.0.0/build/grids-responsive-min.css" integrity="sha384-zSu8LMfA4z+XX+S+3seN6uTKIYy1Qcfk0dNE+/0SHT5UgOHCnFeHjR16aowIFpII" crossorigin="anonymous" />
-      <link rel="stylesheet" href="{{ SITEURL }}/theme/css/style.css" />
-      <link rel="stylesheet" href="{{ SITEURL }}/theme/css/pygment.css" />
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/firacode@6.2.0/distr/fira_code.css" integrity="sha384-4aMEnBa9HzMLsDYaLm5wiA2ZoWDqNSB6pNnINMFUt13g9VOuTY5hZC49pzHzRXVs" crossorigin="anonymous">
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/purecss@3.0.0/build/pure-min.css" integrity="sha384-X38yfunGUhNzHpBaEBsWLO+A0HDYOQi8ufWDkZ0k9e0eXz/tH3II7uKZ9msv++Ls" crossorigin="anonymous">
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/purecss@3.0.0/build/grids-responsive-min.css" integrity="sha384-zSu8LMfA4z+XX+S+3seN6uTKIYy1Qcfk0dNE+/0SHT5UgOHCnFeHjR16aowIFpII" crossorigin="anonymous">
+      <link rel="stylesheet" href="{{ SITEURL }}/theme/css/style.css">
+      <link rel="stylesheet" href="{{ SITEURL }}/theme/css/pygment.css">
 
       {% if FEED_DOMAIN %}
         {% if FEED_ATOM %}
           <link href="{{ FEED_DOMAIN }}/{{ FEED_ATOM }}" type="application/atom+xml" rel="alternate"
-                title="Flux Atom du site, {{ SITENAME }}" />
+                title="Flux Atom du site, {{ SITENAME }}">
         {% endif %}
         {% if CATEGORY_FEED_ATOM and category %}
           <link href="{{ FEED_DOMAIN }}/{{ CATEGORY_FEED_ATOM.format(slug=category.slug) }}"
-                type="application/atom+xml" rel="alternate" title="Flux Atom des catégories, {{ SITENAME }}" />
+                type="application/atom+xml" rel="alternate" title="Flux Atom des catégories, {{ SITENAME }}">
         {% endif %}
         {% if TAG_FEED_ATOM and tag %}
           <link href="{{ FEED_DOMAIN }}/{{ TAG_FEED_ATOM.format(slug=tag.slug) }}" type="application/atom+xml"
-                rel="alternate" title="Flux Atom des étiquettes, {{ SITENAME }}" />
+                rel="alternate" title="Flux Atom des étiquettes, {{ SITENAME }}">
         {% endif %}
         {% if AUTHOR_FEED_ATOM and author %}
           <link href="{{ FEED_DOMAIN }}/{{ AUTHOR_FEED_ATOM.format(slug=author.slug) }}" type="application/atom+xml"
-                rel="alternate" title="Flux Atom des Auteurs, {{ SITENAME }}" />
+                rel="alternate" title="Flux Atom des Auteurs, {{ SITENAME }}">
         {% endif %}
       {% endif %}
 
